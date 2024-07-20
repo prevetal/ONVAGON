@@ -48,9 +48,9 @@
 
 					<div class="scroll">
 						<div class="cont row">
-							<a href="/" class="logo">
+							<div class="logo">
 								<img src="images/logo.svg" alt="">
-							</a>
+							</div>
 
 							<div class="slogan">
 								<img src="images/slogan.svg" alt="">
@@ -91,9 +91,17 @@
 							</div>
 
 							<div class="account">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+								<div class="user">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_account"></use></svg>
 
-								<a href="/">Личный кабинет</a>
+									<div>
+										<div class="name">Михаил</div>
+
+										<div class="company">ООО «Желдорпроект»</div>
+									</div>
+
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver2"></use></svg>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -113,48 +121,154 @@
 				</section>
 
 
-				<section class="login">
-					<div class="cont">
-						<div class="data">
-							<div class="title">Вход в личный кабинет</div>
+				<section class="page_head content_flex">
+					<div class="cont row">
+						<div class="content">
+							<div class="breadcrumbs">
+								<a href="/">Главная</a>
 
-							<form action="" class="form">
-								<div class="line">
-									<div class="field">
-										<input type="email" name="" value="" class="input">
+								<span class="sep"></span>
 
-										<div class="label">Электронная почта</div>
-									</div>
-								</div>
+								<a href="/">Документы</a>
 
-								<div class="line">
-									<div class="field">
-										<input type="password" name="" value="" class="input">
+								<span class="sep"></span>
 
-										<div class="label">Пароль</div>
-									</div>
-								</div>
-
-								<div class="line recovery_link">
-									<a href="/">Восстановление пароля</a>
-								</div>
-
-								<div class="submit">
-									<div class="captcha">
-										<img src="images/tmp/captcha_img.png" alt="">
-									</div>
-
-									<button type="submit" class="submit_btn">Войти</button>
-								</div>
-							</form>
-
-							<div class="register_link">
-								<a href="/">РЕГИСТРАЦИЯ на площадке</a>
+								<span class="current">Банковские реквизиты</span>
 							</div>
+
+							<h1 class="page_title">Банковские реквизиты</h1>
 						</div>
 					</div>
+				</section>
 
-					<img src="images/bg_login.svg" alt="" loading="lazy" class="bg">
+
+				<section class="lk_info content_flex">
+					<div class="cont row">
+						<aside>
+							<div class="lk_menu">
+								<div class="title">Мой кабинет</div>
+
+								<div class="items">
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu1.svg" alt="">
+										</div>
+
+										<span>Мои процедуры</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu2.svg" alt="">
+										</div>
+
+										<span>Создание процедуры</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu3.svg" alt="">
+										</div>
+
+										<span>Настройки профиля</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu4.svg" alt="">
+										</div>
+
+										<span>Регистрационные данные</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu5.svg" alt="">
+										</div>
+
+										<span>Уведомления</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu6.svg" alt="">
+										</div>
+
+										<span>Личные сообщения</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu7.svg" alt="">
+										</div>
+
+										<span>Банковские реквизиты</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<img src="images/ic_lk_menu8.svg" alt="">
+										</div>
+
+										<span>Выход из кабинета</span>
+									</a></div>
+								</div>
+							</div>
+						</aside>
+
+
+						<section class="content">
+							<div class="lk_data requisites">
+								<form action="" class="form">
+									<div class="title">Банковские реквизиты</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">Сокращённое наименование организации / индивидуального предпринимателя *</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field small">
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">БИК *</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">Наименование банка *</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">Корреспондентский счёт *</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">Расчётный счёт *</div>
+										</div>
+									</div>
+
+									<div class="submit">
+										<button type="submit" class="submit_btn">Сохранить изменения</button>
+									</div>
+								</form>
+							</div>
+						</section>
+					</div>
 				</section>
 			</div>
 
@@ -217,10 +331,10 @@
 
 					<div class="line"></div>
 
-					<div class="copyright">&copy; 2024 ООО «Вагон-Трейд». Все права защищены.</div>
+					<div class="copyright">&copy; 2024 ООО «Вагон-Трейд». Все права защищены.</div>
 
 					<div class="privacy_policy_link">
-						<a href="/">Политика конфиденциальности и обработки персональных данных</a>
+						<a href="/">Политика конфиденциальности и обработки персональных данных</a>
 					</div>
 				</div>
 

@@ -133,10 +133,10 @@
 
 								<span class="sep"></span>
 
-								<span class="current">Уведомления</span>
+								<span class="current">Создание процедуры</span>
 							</div>
 
-							<h1 class="page_title">Уведомления</h1>
+							<h1 class="page_title">Создание процедуры</h1>
 						</div>
 					</div>
 				</section>
@@ -218,81 +218,172 @@
 
 
 						<section class="content">
-							<div class="lk_data notifications">
-								<form action="" class="form filter">
-									<div class="line full_w">
-										<div class="field">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+							<div class="lk_data creating_procedure">
+								<form action="" class="form">
+									<div class="section">
+										<div class="title">Общие сведения</div>
 
-											<input type="text" name="" value="" class="input">
+										<div class="line">
+											<div class="field">
+												<input type="text" name="" value="" class="input">
 
-											<div class="label">Введите ключевое слово для поиска</div>
+												<div class="label">Наименование процедуры (лота) *</div>
+											</div>
+										</div>
+
+										<div class="line">
+											<div class="field">
+												<textarea name=""></textarea>
+
+												<div class="label">Описание лота</div>
+											</div>
+										</div>
+
+										<div class="line">
+											<div class="field small">
+												<input type="text" name="" value="" class="input">
+
+												<div class="label">Начальная цена *</div>
+											</div>
+										</div>
+
+										<div class="line">
+											<div class="field">
+												<input type="text" name="" value="" class="input">
+
+												<div class="label">Тип вагона или запчасти *</div>
+											</div>
+										</div>
+
+										<div class="line">
+											<div class="field">
+												<input type="text" name="" value="" class="input">
+
+												<div class="label">Адрес местоположения лота *</div>
+											</div>
 										</div>
 									</div>
+
+
+									<div class="section">
+										<div class="title">Документы лота</div>
+
+										<div class="line file">
+											<div class="field">
+												<div class="label">Документы процедуры *</div>
+
+												<label>
+													<input type="file" name="file1">
+
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_add_file"></use></svg>
+
+													<div>Прикрепить файл</div>
+												</label>
+											</div>
+										</div>
+
+										<div class="line file">
+											<div class="field">
+												<div class="label">Документы лота *</div>
+
+												<div class="selected">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_pdf"></use></svg>
+
+													<div class="name">Документ компании устав.pdf</div>
+
+													<button type="button" class="delete_btn">Удалить файл</button>
+												</div>
+
+												<label>
+													<input type="file" name="file1">
+
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_add_file"></use></svg>
+
+													<div>Заменить файл</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="section">
+										<div class="title">Фотографии лота</div>
+
+										<div class="line gallery">
+											<div class="row">
+												<div class="item">
+													<div class="thumb">
+														<img src="images/tmp/form_gallery_thumb.jpg" alt="" loading="lazy">
+													</div>
+
+													<button type="button" class="delete_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete"></use></svg>
+														<span>Удалить</span>
+													</button>
+												</div>
+
+												<div class="item">
+													<div class="thumb">
+														<img src="images/tmp/form_gallery_thumb.jpg" alt="" loading="lazy">
+													</div>
+
+													<button type="button" class="delete_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete"></use></svg>
+														<span>Удалить</span>
+													</button>
+												</div>
+
+												<div class="item">
+													<div class="thumb">
+														<img src="images/tmp/form_gallery_thumb.jpg" alt="" loading="lazy">
+													</div>
+
+													<button type="button" class="delete_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete"></use></svg>
+														<span>Удалить</span>
+													</button>
+												</div>
+
+												<div class="item">
+													<div class="thumb">
+														<img src="images/tmp/form_gallery_thumb.jpg" alt="" loading="lazy">
+													</div>
+
+													<button type="button" class="delete_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete"></use></svg>
+														<span>Удалить</span>
+													</button>
+												</div>
+
+												<div class="item">
+													<div class="thumb">
+														<img src="images/tmp/form_gallery_thumb.jpg" alt="" loading="lazy">
+													</div>
+
+													<button type="button" class="delete_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete"></use></svg>
+														<span>Удалить</span>
+													</button>
+												</div>
+											</div>
+
+											<div class="file">
+												<label>
+													<input type="file" name="file1">
+
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_add_file"></use></svg>
+
+													<div>Прикрепить файл</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="submit">
+										<button type="submit" class="submit_btn">СОЗДАТЬ ПРОЦЕДУРУ</button>
+									</div>
 								</form>
-
-								<table>
-									<thead>
-										<tr>
-											<th>Номер</th>
-											<th>Тема</th>
-											<th>От кого</th>
-											<th>Дата</th>
-										</tr>
-									</thead>
-
-									<tbody>
-										<tr>
-											<td>249037</td>
-
-											<td><a href="/">Заявка на аккредитацию отклонена</a></td>
-
-											<td>Организатор процедуры</td>
-
-											<td>04.05.2024 11:37</td>
-										</tr>
-
-										<tr>
-											<td>249037</td>
-
-											<td><a href="/">Сведения в профиле прошли проверку и успешно обновлены</a></td>
-
-											<td>Администрация</td>
-
-											<td>04.05.2024 11:37</td>
-										</tr>
-
-										<tr>
-											<td>249037</td>
-
-											<td><a href="/">Ошибка при обновлении сведений в профиле</a></td>
-
-											<td>Администрация</td>
-
-											<td>04.05.2024 11:37</td>
-										</tr>
-
-										<tr>
-											<td>249037</td>
-
-											<td><a href="/">Разблокировка обеспечения участия в процедуре № 2394–565–001</a></td>
-
-											<td>Администрация</td>
-
-											<td>04.05.2024 11:37</td>
-										</tr>
-
-										<tr>
-											<td>249037</td>
-
-											<td><a href="/">Заявка на аккредитацию отклонена</a></td>
-
-											<td>Администрация</td>
-
-											<td>04.05.2024 11:37</td>
-										</tr>
-									</tbody>
-								</table>
 							</div>
 						</section>
 					</div>

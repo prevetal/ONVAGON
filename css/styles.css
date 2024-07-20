@@ -144,7 +144,7 @@ html.custom_scroll ::-webkit-scrollbar
 
 html.custom_scroll ::-webkit-scrollbar-thumb
 {
-    background-color: #343448;
+    background-color: #0155e9;
 }
 
 
@@ -873,6 +873,37 @@ aside
 }
 
 
+.form .columns
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: calc(var(--form_columns_offset) * -1);
+
+    --form_columns_offset: 24px;
+}
+
+.form .columns > *
+{
+    width: calc(50% - var(--form_columns_offset));
+    margin-left: var(--form_columns_offset);
+}
+
+
+.form .columns > *.width1of3
+{
+    width: calc(33.333% - var(--form_columns_offset));
+}
+
+.form .columns > *.width2of3
+{
+    width: calc(66.666% - var(--form_columns_offset));
+}
+
+
 .form .line
 {
     margin-bottom: 40px;
@@ -882,6 +913,18 @@ aside
 .form .field
 {
     position: relative;
+}
+
+.form .field.small
+{
+    width: 337px;
+    max-width: 100%;
+}
+
+
+.form .field + .field
+{
+    margin-top: 20px;
 }
 
 
@@ -912,7 +955,7 @@ aside
 
     width: 100%;
     height: 60px;
-    padding: 0 23px;
+    padding: 17px 23px 0;
 
     transition: border-color .2s linear;
 
@@ -933,9 +976,112 @@ aside
 }
 
 
+.form textarea
+{
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+
+    display: block;
+
+    width: 100%;
+    height: 120px;
+    padding: 29px 23px 0;
+
+    resize: none;
+    transition: border-color .2s linear;
+
+    color: var(--text_color);
+    border: 1px solid var(--form_border_color);
+    border-radius: var(--form_border_radius);
+    background: var(--form_bg_color);
+}
+
+.form textarea::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+}
+
+
+.form .label
+{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 2px);
+    height: 58px;
+    padding: 0 23px;
+
+    transition: .2s linear;
+    pointer-events: none;
+
+    color: var(--form_placeholder_color);
+}
+
+.form .icon ~ .label
+{
+    padding-left: 74px;
+}
+
+
 .form .input:focus
 {
     border-color: var(--form_focus_color);
+}
+
+
+.form .input:focus ~ .label,
+.form .input.active ~ .label,
+.form textarea:focus ~ .label,
+.form textarea.active ~ .label,
+.form select.selected ~ .label,
+.form .nice-select.open ~ .label
+{
+    font-size: 13px;
+
+    height: 28px;
+    padding-top: 10px;
+
+    border-radius: var(--form_border_radius);
+    background: #fff;
+}
+
+
+.form .toggle_type
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+
+    color: #768096;
+}
+
+
+.form .toggle_type svg
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -957,13 +1103,13 @@ aside
 
 .form .nice-select .current
 {
-    line-height: 58px;
+    line-height: 41px;
 
     display: block;
     overflow: hidden;
 
     height: 60px;
-    padding: 0 43px 0 23px;
+    padding: 17px 43px 0 23px;
 
     cursor: pointer;
     white-space: nowrap;
@@ -1049,6 +1195,7 @@ aside
 .form .nice-select + .arr
 {
     position: absolute;
+    z-index: 7;
     top: 0;
     right: 24px;
     bottom: 0;
@@ -1076,6 +1223,269 @@ aside
 }
 
 
+.form .file .field
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    min-height: 90px;
+    padding: 24px;
+
+    border-radius: 6px;
+    background: #f3f4f7;
+}
+
+
+.form .file .label
+{
+    position: relative;
+
+    width: 340px;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+
+    color: var(--text_color);
+}
+
+
+.form .file .selected
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 299px;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+
+.form .file .selected .icon
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    color: #cc3131;
+}
+
+
+.form .file .selected .name
+{
+    align-self: center;
+
+    width: calc(100% - 38px);
+}
+
+
+.form .file .selected .delete_btn
+{
+    margin-left: 38px;
+
+    color: #768096;
+}
+
+
+.form .file input
+{
+    display: none;
+}
+
+
+.form .file label
+{
+    font-weight: 600;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    cursor: pointer;
+
+    color: #0155e9;
+}
+
+
+.form .file label .icon
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+
+.form .gallery
+{
+    padding: 40px;
+
+    border-radius: 6px;
+    background: #f3f4f7;
+}
+
+
+.form .gallery .row
+{
+    margin-bottom: -24px;
+    margin-left: -24px;
+}
+
+
+.form .gallery .row > *
+{
+    width: 150px;
+    max-width: 100%;
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+
+.form .gallery .thumb
+{
+    position: relative;
+
+    padding-bottom: 73.333%;
+
+    background: #ddd;
+}
+
+
+.form .gallery .thumb img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.form .gallery .delete_btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 10px auto 0;
+
+    color: #768096;
+}
+
+
+.form .gallery .delete_btn .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+.form .gallery .file
+{
+    margin-top: 40px;
+}
+
+
+.form .gallery .file label
+{
+    margin: 0;
+}
+
+
+.form .checkbox
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    min-height: 30px;
+    padding-left: 46px;
+
+    cursor: pointer;
+}
+
+
+.form .checkbox input
+{
+    display: none;
+}
+
+
+.form .checkbox .check
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    transition: .2s linear;
+
+    color: #fff;
+    border: 1px solid var(--form_border_color);
+    border-radius: 6px;
+    background: var(--form_bg_color);
+}
+
+
+.form .checkbox .check svg
+{
+    display: block;
+
+    width: 17px;
+    height: 12px;
+
+    content: '';
+    transition: opacity .2s linear;
+
+    opacity: 0;
+}
+
+
+.form .checkbox input:checked ~ .check
+{
+    border-color: #0155e9;
+    background: #0155e9;
+}
+
+
+.form .checkbox input:checked ~ .check svg
+{
+    opacity: 1;
+}
+
+
 .form .submit_btn
 {
     font-size: 20px;
@@ -1089,7 +1499,7 @@ aside
     text-transform: uppercase;
 
     color: #fff;
-    border-radius: 50px;
+    border-radius: var(--form_border_radius);
     background: #ea5d31;
 }
 
@@ -2418,6 +2828,164 @@ aside
     min-width: 224px;
 
     table-layout: fixed;
+}
+
+
+
+.lk_info .form:not(.filter)
+{
+    width: 864px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+    --form_border_radius: 6px;
+}
+
+
+.lk_info .form:not(.filter) .section + .section
+{
+    margin-top: 90px;
+}
+
+
+.lk_info .form:not(.filter) .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 40px;
+}
+
+
+.lk_info .form:not(.filter) .nice-select-dropdown
+{
+    border-radius: 6px;
+}
+
+
+.lk_info .form:not(.filter) .submit
+{
+    padding-top: 50px;
+}
+
+
+.lk_info .form:not(.filter) .submit_btn
+{
+    font-size: 18px;
+
+    width: auto;
+    padding: 0 60px;
+
+    background: #00b851;
+}
+
+
+.lk_info .form:not(.filter) .submit.small
+{
+    padding: 0;
+}
+
+
+.lk_info .form:not(.filter) .submit.small .submit_btn
+{
+    width: 337px;
+    max-width: 100%;
+    padding: 0 40px;
+}
+
+
+
+/*--------------
+    Register
+--------------*/
+.register
+{
+    margin-bottom: 150px;
+}
+
+
+.register .data
+{
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.register .form
+{
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+    --form_border_radius: 6px;
+}
+
+
+.register .form .block
+{
+    margin: 0;
+    padding: 40px 148px 20px;
+
+    border-radius: 6px;
+    background: #fff;
+}
+
+.register .form .block + .block
+{
+    margin-top: 40px;
+}
+
+
+.register .form .section + .section
+{
+    margin-top: 90px;
+}
+
+
+.register .form .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 40px;
+}
+
+
+.register .form .section .row
+{
+    margin-left: -24px;
+}
+
+
+.register .form .section .row > *
+{
+    max-width: calc(100% - 24px);
+    margin-left: 24px;
+}
+
+
+.register .form .nice-select-dropdown
+{
+    border-radius: 6px;
+}
+
+
+.register .form .submit
+{
+    padding-top: 50px;
+}
+
+
+.register .form .submit_btn
+{
+    font-size: 18px;
+
+    width: auto;
+    padding: 0 60px;
+
+    background: #00b851;
 }
 
 

@@ -4,64 +4,6 @@ BODY = document.getElementsByTagName('body')[0]
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	// Products slider
-	const productsSliders = [],
-		products = document.querySelectorAll('.products .swiper')
-
-	products.forEach((el, i) => {
-		el.classList.add('products_s' + i)
-
-		let options = {
-			loop: false,
-			speed: 500,
-			watchSlidesProgress: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
-			},
-			lazy: true,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				bulletActiveClass: 'active'
-			},
-			breakpoints: {
-				0: {
-					spaceBetween: 12,
-					slidesPerView: 'auto'
-				},
-				480: {
-					spaceBetween: 20,
-					slidesPerView: 2
-				},
-				768: {
-					spaceBetween: 30,
-					slidesPerView: 3
-				},
-				1280: {
-					spaceBetween: 30,
-					slidesPerView: 4
-				}
-			},
-			on: {
-				init: swiper => setHeight(swiper.el.querySelectorAll('.product')),
-				resize: swiper => {
-					let products = swiper.el.querySelectorAll('.product')
-
-					products.forEach(el => el.style.height = 'auto')
-
-					setHeight(products)
-				}
-			}
-		}
-
-		productsSliders.push(new Swiper('.products_s' + i, options))
-	})
-
-
 	// Mob. menu
 	$('.mob_header .mob_menu_btn').click((e) => {
 		e.preventDefault()
@@ -107,6 +49,30 @@ document.addEventListener('DOMContentLoaded', function () {
 			el.addEventListener('change', () => el.classList.add('selected'))
 		})
 	}
+
+
+	// Form inputs
+	$('.form .input, .form textarea').keydown(function() {
+		let _self = $(this)
+
+		setTimeout(() => {
+			_self.val().length
+				? _self.addClass('active')
+				: _self.removeClass('active')
+		})
+	})
+
+
+	// Toggle password input type
+	$('.form .toggle_type').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+
+		$(this).hasClass('active')
+			? $(this).closest('.field').find('.input').attr('type', 'text')
+			: $(this).closest('.field').find('.input').attr('type', 'password')
+	})
 })
 
 
