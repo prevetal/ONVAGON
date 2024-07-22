@@ -3,68 +3,120 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .cont
     {
-        padding: 16px;
+        padding: 0 16px;
     }
 
 
 
-    /*-----------------
-        Mob. header
-    -----------------*/
-
-
-
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
-    /*---------------
-        Page head
-    ---------------*/
-
-
-
     /*----------------
-        Block head
+        Pagination
     ----------------*/
+    .pagination > * + *
+    {
+        margin-left: 8px;
+    }
+
+
+    .pagination .hide
+    {
+        display: none;
+    }
 
 
 
     /*------------------
         Form elements
     ------------------*/
+    .form .input:focus ~ .label,
+    .form .input.active ~ .label,
+    .form textarea:focus ~ .label,
+    .form textarea.active ~ .label,
+    .form select.selected ~ .label,
+    .form .nice-select.open ~ .label
+    {
+        font-size: 12px;
+    }
+
+
+    .form .gallery
+    {
+        padding: 24px 16px;
+    }
+
+
+    .form .gallery .row
+    {
+        margin-bottom: -16px;
+        margin-left: -16px;
+    }
+
+
+    .form .gallery .row > *
+    {
+        width: calc(50% - 16px);
+        margin-bottom: 16px;
+        margin-left: 16px;
+    }
 
 
 
-    /*----------------
-        Typography
-    ----------------*/
+    /*-----------
+        Login
+    -----------*/
+    .login .data
+    {
+        padding: 40px 24px;
+    }
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data
+    {
+        padding-right: 16px;
+    }
+
+
+
+    .contacts_info .map
+    {
+        width: calc(100% + 16px);
+        max-width: calc(100% + 16px);
+        height: 275px;
+        margin-right: -16px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .lk_data
+    {
+        padding: 24px 16px;
+    }
+
+
+
+    /*--------------
+        Register
+    --------------*/
+    .register .form .block
+    {
+        padding: 24px 16px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
-
-
-
-    /*-----------
-        PopUp
-    -----------*/
+    footer .contacts .label
+    {
+        margin-bottom: 10px;
+    }
 }

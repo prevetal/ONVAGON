@@ -11,13 +11,9 @@
     }
 
 
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .content_flex .content
     {
-        padding: 32px;
+        width: 100%;
     }
 
 
@@ -25,52 +21,293 @@
     /*------------
         Header
     ------------*/
+    header
+    {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 100%;
+        left: auto;
+
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        margin: 0;
+        padding: 74px 0 0;
+
+        transition: transform .3s linear;
+
+        background: #fff;
+    }
+
+    header.show
+    {
+        transform: translateX(100%);
+    }
+
+
+    header .scroll
+    {
+        overflow: auto;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 24px 0;
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    header .logo,
+    header .slogan,
+    header .account
+    {
+        display: none;
+    }
+
+
+    header .menu
+    {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    header .menu_item + .menu_item
+    {
+        margin-top: 24px;
+        margin-left: 0;
+    }
+
+
+    header .menu_item > a
+    {
+        font-size: 18px;
+    }
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
+    header .contacts
+    {
+        margin-top: 48px;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        display: block;
+    }
 
 
 
     /*---------------
         Page head
     ---------------*/
+    .page_head
+    {
+        padding: 40px 0;
+    }
 
 
+    .breadcrumbs
+    {
+        font-size: 14px;
+    }
 
-    /*----------------
-        Block head
-    ----------------*/
+
+    .breadcrumbs .sep
+    {
+        margin: 0 8px;
+    }
+
+
+    .page_title
+    {
+        font-size: 40px;
+
+        margin-top: 20px;
+    }
 
 
 
     /*------------------
         Form elements
     ------------------*/
+    .form .line
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .form .submit_btn
+    {
+        font-size: 16px;
+    }
 
 
 
-    /*----------------
-        Typography
-    ----------------*/
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*-----------
+        Login
+    -----------*/
+    .login .data
+    {
+        width: 600px;
+        padding: 60px 80px;
+    }
+
+
+    .login .title
+    {
+        font-size: 32px;
+    }
+
+
+    .login .recovery_link
+    {
+        margin-top: -10px;
+    }
+
+
+    .login .form .captcha
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .login .register_link
+    {
+        font-size: 16px;
+
+        margin-top: 30px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data
+    {
+        width: 100%;
+        padding: 40px 60px 40px 0;
+    }
+
+
+
+    .contacts_info .map
+    {
+        width: calc(100% + 24px);
+        max-width: calc(100% + 24px);
+        height: 400px;
+        margin-top: 40px;
+        margin-right: -24px;
+    }
+
+
+
+    /*--------------
+        Register
+    --------------*/
+    .register .form .block
+    {
+        padding: 40px 40px 20px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_menu
+    {
+        display: none;
+    }
+
+
+    .mob_lk_menu
+    {
+        display: block;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer .bg
+    {
+        left: 0;
+
+        transform: none;
+    }
+
+
+    footer .col
+    {
+        width: 100%;
+        margin-bottom: 48px;
+    }
 
 
 
-    /*-----------
-        PopUp
-    -----------*/
+    footer .logo
+    {
+        margin-top: 0;
+    }
+
+
+
+    footer .links
+    {
+        column-gap: 48px;
+    }
+
+
+
+    footer .sep
+    {
+        display: none;
+    }
+
+
+    footer .sep ~ .sep
+    {
+        display: block;
+    }
+
+
+
+    footer .copyright
+    {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+
+    footer .privacy_policy_link
+    {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
 }

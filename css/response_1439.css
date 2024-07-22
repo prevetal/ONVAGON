@@ -1,0 +1,154 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .contacts .email
+    {
+        margin-left: 24px;
+    }
+
+
+    header .account
+    {
+        margin-left: 16px;
+        padding-left: 52px;
+    }
+
+
+    header .account .user .name
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title
+    {
+        font-size: 48px;
+
+        margin-top: 30px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .line
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .form .submit_btn
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*-----------
+        Login
+    -----------*/
+    .login
+    {
+        padding: 136px 0 100px;
+    }
+
+
+    .login .data
+    {
+        width: 680px;
+        padding: 60px 100px 80px;
+    }
+
+
+    .login .title
+    {
+        font-size: 36px;
+    }
+
+
+    .login .register_link
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info
+    {
+        padding-bottom: 100px;
+    }
+
+
+    .contacts_info .data
+    {
+        width: 600px;
+
+        border-radius: 0 25px 100px 0;
+    }
+
+
+    .contacts_info .data .title
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .contacts_info .data .item .label
+    {
+        font-size: 16px;
+
+        width: 180px;
+    }
+
+
+    .contacts_info .data .item .val
+    {
+        width: calc(100% - 180px);
+    }
+
+
+
+    .contacts_info .map
+    {
+        width: calc(100% - 668px);
+        margin-right: -24px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .bg
+    {
+        width: 1500px;
+    }
+
+
+
+    footer .contacts
+    {
+        width: 424px;
+    }
+}

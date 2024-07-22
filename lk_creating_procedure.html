@@ -35,6 +35,8 @@
 		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
+		<link rel="stylesheet" href="css/response_1899.css" media="print, (max-width: 1899px)" async>
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
 		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
 		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
 		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
@@ -111,13 +113,23 @@
 
 				<section class="mob_header">
 					<div class="cont row">
-						<div class="logo">
-							<img src="images/logo.svg" alt="">
-						</div>
-
 						<button class="mob_menu_btn">
 							<span></span>
 						</button>
+
+						<a href="/" class="logo">
+							<img src="images/logo.svg" alt="">
+						</a>
+
+						<button class="search_btn">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+						</button>
+
+						<div class="account">
+							<a href="/">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+							</a>
+						</div>
 					</div>
 				</section>
 
@@ -146,6 +158,77 @@
 				<section class="lk_info content_flex block big_m">
 					<div class="cont row">
 						<aside>
+							<div class="mob_lk_menu modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#id">
+									<div class="icon">
+										<svg><use xlink:href="images/sprite.svg#ic_lk_menu1"></use></svg>
+									</div>
+
+									<span>Мои процедуры</span>
+
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="id">
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu2"></use></svg>
+										</div>
+
+										<span>Создание процедуры</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu3"></use></svg>
+										</div>
+
+										<span>Настройки профиля</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu4"></use></svg>
+										</div>
+
+										<span>Регистрационные данные</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu5"></use></svg>
+										</div>
+
+										<span>Уведомления</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu6"></use></svg>
+										</div>
+
+										<span>Личные сообщения</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu7"></use></svg>
+										</div>
+
+										<span>Банковские реквизиты</span>
+									</a></div>
+
+									<div><a href="/">
+										<div class="icon">
+											<svg><use xlink:href="images/sprite.svg#ic_lk_menu8"></use></svg>
+										</div>
+
+										<span>Выход из кабинета</span>
+									</a></div>
+								</div>
+							</div>
+
+
 							<div class="lk_menu">
 								<div class="title">Мой кабинет</div>
 
@@ -399,7 +482,7 @@
 							<img src="images/logo_white.svg" alt="">
 						</div>
 
-						<div class="desc">Торговая площадка по продаже<br> и покупки ж/д вагонов по России и СНГ</div>
+						<div class="desc">Торговая площадка по&nbsp;продаже<br> и&nbsp;покупки ж/д вагонов по&nbsp;России и&nbsp;СНГ</div>
 					</div>
 
 					<div class="sep"></div>

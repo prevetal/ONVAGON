@@ -5,22 +5,12 @@ BODY = document.getElementsByTagName('body')[0]
 
 document.addEventListener('DOMContentLoaded', function () {
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('.mob_header .mob_menu_btn').click(e => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').addClass('active')
-		$('body').addClass('menu_open')
-		$('header').addClass('show')
-		$('.overlay').fadeIn(300)
-	})
-
-	$('header > .close, .overlay').click((e) => {
-		e.preventDefault()
-
-		$('.mob_header .mob_menu_btn').removeClass('active')
-		$('body').removeClass('menu_open')
-		$('header').removeClass('show')
-		$('.overlay').fadeOut(300)
+		$('.mob_header .mob_menu_btn').toggleClass('active')
+		$('body').toggleClass('menu_open')
+		$('header').toggleClass('show')
 	})
 
 

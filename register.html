@@ -35,6 +35,8 @@
 		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
+		<link rel="stylesheet" href="css/response_1899.css" media="print, (max-width: 1899px)" async>
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
 		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
 		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
 		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
@@ -103,13 +105,23 @@
 
 				<section class="mob_header">
 					<div class="cont row">
-						<div class="logo">
-							<img src="images/logo.svg" alt="">
-						</div>
-
 						<button class="mob_menu_btn">
 							<span></span>
 						</button>
+
+						<a href="/" class="logo">
+							<img src="images/logo.svg" alt="">
+						</a>
+
+						<button class="search_btn">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+						</button>
+
+						<div class="account">
+							<a href="/">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+							</a>
+						</div>
 					</div>
 				</section>
 
@@ -137,7 +149,11 @@
 										<div class="field">
 											<input type="text" name="" value="" class="input">
 
-											<div class="label">Полное наименование организации / индивидуального предпринимателя *</div>
+											<div class="label">
+												<span>Полное наименование организации / индивидуального предпринимателя *</span>
+
+												<span>Полное наименование организации *</span>
+											</div>
 										</div>
 									</div>
 
@@ -145,7 +161,11 @@
 										<div class="field">
 											<input type="text" name="" value="" class="input">
 
-											<div class="label">Сокращённое наименование организации / индивидуального предпринимателя *</div>
+											<div class="label">
+												<span>Сокращённое наименование организации / индивидуального предпринимателя *</span>
+
+												<span>Сокращённое наименование организации *</span>
+											</div>
 										</div>
 									</div>
 
@@ -560,7 +580,7 @@
 							<img src="images/logo_white.svg" alt="">
 						</div>
 
-						<div class="desc">Торговая площадка по продаже<br> и покупки ж/д вагонов по России и СНГ</div>
+						<div class="desc">Торговая площадка по&nbsp;продаже<br> и&nbsp;покупки ж/д вагонов по&nbsp;России и&nbsp;СНГ</div>
 					</div>
 
 					<div class="sep"></div>

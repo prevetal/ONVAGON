@@ -4,15 +4,9 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .cont
     {
-        padding: 20px;
+        padding: 0 20px;
     }
 
 
@@ -20,52 +14,212 @@
     /*-----------------
         Mob. header
     -----------------*/
-
-
-
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
-    /*---------------
-        Page head
-    ---------------*/
-
-
-
-    /*----------------
-        Block head
-    ----------------*/
+    .mob_header .logo img
+    {
+        height: 40px;
+    }
 
 
 
     /*------------------
         Form elements
     ------------------*/
+    .form .columns > *.width1of3,
+    .form .columns > *.width2of3
+    {
+        width: calc(100% - var(--form_columns_offset));
+    }
+
+
+    .form .line
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .form .field.small
+    {
+        width: 100%;
+    }
+
+
+    .form .file .label
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .form .file .selected
+    {
+        width: 100%;
+    }
+
+
+    .form .file .selected + label
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .form .gallery .row > *
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .form .gallery .delete_btn
+    {
+        font-size: 14px;
+    }
 
 
 
-    /*----------------
-        Typography
-    ----------------*/
+    /*-----------
+        Login
+    -----------*/
+    .login .data
+    {
+        width: 100%;
+        padding: 40px;
+    }
+
+
+    .login .title br
+    {
+        display: block;
+    }
+
+
+    .login .recovery_link
+    {
+        font-size: 14px;
+
+        margin-top: 0;
+    }
+
+
+    .login .form .captcha
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .login .form .submit_btn
+    {
+        width: 100%;
+    }
+
+
+    .login .register_link
+    {
+        margin-top: 20px;
+    }
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data
+    {
+        padding-right: 24px;
+    }
+
+
+    .contacts_info .data .item .label
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    .contacts_info .data .item .val
+    {
+        width: 100%;
+    }
+
+
+
+    .contacts_info .map
+    {
+        height: 360px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .lk_data
+    {
+        padding: 24px;
+    }
+
+
+
+    .lk_info .form:not(.filter) .section + .section
+    {
+        margin-top: 50px;
+    }
+
+
+    .lk_info .form:not(.filter) .submit_btn,
+    .lk_info .form:not(.filter) .submit.small .submit_btn
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+
+    /*--------------
+        Register
+    --------------*/
+    .register .form .section + .section
+    {
+        margin-top: 50px;
+    }
+
+
+    .register .form .section .row
+    {
+        margin-left: auto;
+    }
+
+
+    .register .form .section .row > *
+    {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+
+    .register .form .submit_btn
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding-bottom: 160px;
+    }
 
 
 
-    /*-----------
-        PopUp
-    -----------*/
+    footer .links
+    {
+        height: 132px;
+
+        column-gap: 20px;
+        column-count: 2;
+    }
 }
