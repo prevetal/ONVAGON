@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<!-- Adapting the page for mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Prohibition of phone number recognition -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Page title -->
+		<title>Заголовок страницы</title>
+
+		<!-- Meta description -->
+		<meta name="description" content="">
+
+		<!-- Meta Keywords -->
+		<meta name="keywords" content="">
+
+		<!-- Changing the color of the mobile browser panel -->
+		<meta name="msapplication-TileColor" content="#0155E9">
+		<meta name="theme-color" content="#0155E9">
+
+		<!-- Connecting fonts from Google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
+		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
+		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
+		<link rel="stylesheet" href="css/styles.css" async>
+
+		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
+		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
+		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
+	</head>
+
+	<body>
+		<div class="wrap bg2">
+			<div class="main">
+				<header>
+					<button class="mob_close_btn"></button>
+
+					<div class="scroll">
+						<div class="cont row">
+							<a href="/" class="logo">
+								<img src="images/logo.svg" alt="">
+							</a>
+
+							<div class="slogan">
+								<img src="images/slogan.svg" alt="">
+							</div>
+
+							<nav class="menu row">
+								<div class="menu_item">
+									<a href="/">Каталог</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Услуги</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Документы</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">О площадке</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Контакты</a>
+								</div>
+							</nav>
+
+							<div class="contacts">
+								<div class="email">
+									<a href="mailto:">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+									</a>
+								</div>
+
+								<div class="phone">
+									<a href="tel:88001234567">8 800 123-45-67</a>
+								</div>
+							</div>
+
+							<div class="account">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+
+								<a href="/">Личный кабинет</a>
+							</div>
+						</div>
+					</div>
+				</header>
+
+
+				<section class="mob_header">
+					<div class="cont row">
+						<div class="logo">
+							<img src="images/logo.svg" alt="">
+						</div>
+
+						<button class="mob_menu_btn">
+							<span></span>
+						</button>
+					</div>
+				</section>
+
+
+				<section class="page_head">
+					<div class="cont row">
+						<div class="breadcrumbs">
+							<a href="/">Главная</a>
+
+							<span class="sep"></span>
+
+							<span class="current">Каталог лотов</span>
+						</div>
+
+						<div class="now">Понедельник 20.05.2024 г. 11:09 мск</div>
+
+						<h1 class="page_title">Каталог лотов</h1>
+					</div>
+				</section>
+
+
+				<section class="category_info content_flex block big_m">
+					<div class="cont row">
+						<aside>
+							<div class="filter">
+								<div class="title">Параметры поиска</div>
+
+								<form action="" class="form">
+									<div class="line">
+										<div class="name">Цена</div>
+
+										<div class="range price_range">
+											<div class="vals">
+												<div class="from">от <span>480 110</span> ₽</div>
+
+												<div class="to">до <span>7 780 110</span> ₽</div>
+											</div>
+
+											<input type="hidden" id="price_range" name="price_range" value="">
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="name blue">
+											<span>Регион <span class="count">(3)</span></span>
+
+											<button type="button" class="clear_btn show">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete2"></use></svg>
+											</button>
+										</div>
+
+										<div class="data modal_cont">
+											<div class="field">
+												<button class="btn mini_modal_btn" data-modal-id="#filter_dropdown">
+													<span>Москва и область, Саратовская о…</span>
+
+													<svg class="arr" width="12" height="6"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+												</button>
+
+												<div class="mini_modal" id="filter_dropdown">
+													<!-- <div class="field">
+														<label class="checkbox">
+															<input type="checkbox" name="region[]" checked>
+
+															<div class="check">
+																<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+															</div>
+
+															<div>Москва и область</div>
+														</label>
+													</div>
+
+													<div class="field">
+														<label class="checkbox">
+															<input type="checkbox" name="region[]" checked>
+
+															<div class="check">
+																<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+															</div>
+
+															<div>Москва и область</div>
+														</label>
+													</div>
+
+													<div class="field">
+														<label class="checkbox">
+															<input type="checkbox" name="region[]" checked>
+
+															<div class="check">
+																<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+															</div>
+
+															<div>Москва и область</div>
+														</label>
+													</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="name">Дата процедуры</div>
+
+										<div class="data">
+											<div class="field">
+												<input type="text" name="" value="" class="input input_date">
+
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_calendar"></use></svg>
+
+												<div class="label">Выберите дату</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="name">Тип вагоны</div>
+
+										<div class="data">
+											<div class="field">
+												<select name="" data-placeholder=" ">
+													<option value="1">Вариант 1</option>
+													<option value="2">Вариант 2</option>
+													<option value="3">Вариант 3</option>
+												</select>
+
+												<svg class="arr" width="12" height="6"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+
+												<div class="label">Все вагоны</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="name">Тип запчасти</div>
+
+										<div class="data">
+											<div class="field">
+												<select name="" data-placeholder=" ">
+													<option value="1">Вариант 1</option>
+													<option value="2">Вариант 2</option>
+													<option value="3">Вариант 3</option>
+												</select>
+
+												<svg class="arr" width="12" height="6"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+
+												<div class="label">Все</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="name">Статус процедуры</div>
+
+										<div class="data">
+											<div class="field">
+												<select name="" data-placeholder=" ">
+													<option value="1">Вариант 1</option>
+													<option value="2">Вариант 2</option>
+													<option value="3">Вариант 3</option>
+												</select>
+
+												<svg class="arr" width="12" height="6"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+
+												<div class="label">Все</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="submit">
+										<button type="reset" class="reset_btn">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete2"></use></svg>
+											<span>Очистить фильтры</span>
+										</button>
+
+										<button type="submit" class="submit_btn">
+											<span>Фильтровать</span>
+
+											<div class="icon">
+												<svg><use xlink:href="images/sprite.svg#ic_send"></use></svg>
+											</div>
+										</button>
+									</div>
+								</form>
+							</div>
+						</aside>
+
+
+						<section class="content">
+							<section class="head">
+								<form action="" class="form search">
+									<div class="line">
+										<div class="field">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+
+											<input type="text" name="" value="" class="input">
+
+											<div class="label">Введите ключевое слово для поиска</div>
+										</div>
+									</div>
+
+									<div class="submit">
+										<button type="submit" class="submit_btn">Найти</button>
+									</div>
+								</form>
+
+								<div class="count">Найдено <span>37</span></div>
+
+								<div class="sort">
+									<div class="label">Сортировка:</div>
+
+									<div class="field">
+										<select name="" class="selected" data-placeholder=" ">
+											<option value="1" selected>По умолчанию</option>
+											<option value="2">Вариант 2</option>
+											<option value="3">Вариант 3</option>
+										</select>
+
+										<svg class="arr" width="12" height="6"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									</div>
+								</div>
+							</section>
+
+
+							<section class="lots">
+								<div class="grid row">
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb1.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">7 240 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Омск</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb2.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon red"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+
+													<span>12.05.2024</span>
+													<small>1 день</small>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Омск</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb3.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/no_image.svg" alt="" loading="lazy" class="no_image">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb4.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb5.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb6.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb7.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb1.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">7 240 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Омск</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb2.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon red"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+
+													<span>12.05.2024</span>
+													<small>1 день</small>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Омск</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/tmp/lot_thumb3.jpg" alt="" loading="lazy">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="lot">
+										<div class="thumb">
+											<img src="images/no_image.svg" alt="" loading="lazy" class="no_image">
+										</div>
+
+										<div class="number">№ РЖД-23049</div>
+
+										<div class="name">
+											<a href="/">Вагон зерновой 61–507, приписной номер 017–325239, 1987 года выпуска</a>
+										</div>
+
+										<div class="row">
+											<div class="date">
+												<div class="label">Приём заявок до</div>
+
+												<div class="val">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_time"></use></svg>
+													<span>12.05.2024</span>
+												</div>
+											</div>
+
+											<div class="price">
+												<div class="label">Цена</div>
+
+												<div class="val">3 320 000 ₽</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="region">
+												<div class="label">Регион</div>
+
+												<div class="val">г. Москва</div>
+											</div>
+
+											<div class="link">
+												<a href="/">
+													<span>в лот</span>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="pagination no_border">
+									<a href="/" class="prev">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor2"></use></svg>
+									</a>
+
+									<a class="active">1</a>
+
+									<a href="/">2</a>
+
+									<a href="/">3</a>
+
+									<a href="/">4</a>
+
+									<div class="sep">...</div>
+
+									<a href="/">10</a>
+
+									<a href="/" class="next">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor2"></use></svg>
+									</a>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+			</div>
+
+
+			<footer>
+				<div class="cont row">
+					<div class="col">
+						<div class="logo">
+							<img src="images/logo_white.svg" alt="">
+						</div>
+
+						<div class="desc">Торговая площадка по продаже<br> и покупки ж/д вагонов по России и СНГ</div>
+					</div>
+
+					<div class="sep"></div>
+
+					<div class="links">
+						<div><a href="/">Каталог лотов</a></div>
+
+						<div><a href="/">Услуги</a></div>
+
+						<div><a href="/">Площадка</a></div>
+
+						<div><a href="/">Документы</a></div>
+
+						<div><a href="/">Контакты</a></div>
+
+						<div><a href="/">Карта-сайта</a></div>
+					</div>
+
+					<div class="sep"></div>
+
+					<div class="contacts">
+						<div class="title">Помощь и поддержа</div>
+
+						<div class="row">
+							<div>
+								<div class="label">Телефон</div>
+
+								<div class="val">
+									<a href="tel:88001234567"><b>8 800 123-45-67</b></a>
+								</div>
+							</div>
+
+							<div>
+								<div class="label">Почта</div>
+
+								<div class="val">
+									<a href="mailto:support@onvagon.ru">support@onvagon.ru</a>
+								</div>
+							</div>
+
+							<div>
+								<div class="label">Адрес</div>
+
+								<div class="val">г. Москва, ул. Вагоностроителей, д. 2, оф. 404</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="line"></div>
+
+					<div class="copyright">&copy; 2024 ООО «Вагон-Трейд». Все права защищены.</div>
+
+					<div class="privacy_policy_link">
+						<a href="/">Политика конфиденциальности и обработки персональных данных</a>
+					</div>
+				</div>
+
+				<img src="images/bg_footer.svg" alt="" loading="lazy" class="bg">
+			</footer>
+		</div>
+
+
+		<!-- Connecting javascript files -->
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/nice-select2.js"></script>
+		<script src="js/ion.rangeSlider.min.js"></script>
+		<script src="js/countdown.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

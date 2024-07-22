@@ -268,6 +268,11 @@ button
     margin-bottom: 100px;
 }
 
+.block.big_m
+{
+    margin-bottom: 150px;
+}
+
 
 
 /*----------------
@@ -284,6 +289,14 @@ button
     padding-top: 30px;
 
     border-top: 1px solid #dbe2e9;
+}
+
+.pagination.no_border
+{
+    margin-top: 60px;
+    padding: 0;
+
+    border: none;
 }
 
 
@@ -320,7 +333,7 @@ button
     font-weight: 600;
 
     color: #0155e9;
-    background: #f3f4f7;
+    background: #fff;
 }
 
 
@@ -344,6 +357,42 @@ button
 .pagination .prev .icon
 {
     transform: rotate(180deg);
+}
+
+
+
+/*----------------
+    Mini modal
+----------------*/
+.modal_cont
+{
+    position: relative;
+}
+
+
+.mini_modal
+{
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+
+    visibility: hidden;
+
+    transition: .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.mini_modal.active
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 
@@ -751,6 +800,210 @@ aside
 
 
 
+/*------------
+    Filter
+------------*/
+.filter
+{
+    position: relative;
+
+    padding: 40px 32px 60px;
+}
+
+
+.filter:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 100vw;
+    height: 100%;
+
+    content: '';
+    pointer-events: none;
+
+    background: #fff;
+}
+
+
+.filter .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 40px;
+}
+
+
+.filter .form
+{
+    position: relative;
+    z-index: 3;
+
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+    --form_border_radius: 6px;
+}
+
+
+.filter .form .name
+{
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.filter .form .name.blue
+{
+    color: #0155e9;
+}
+
+
+.filter .form .name .clear_btn
+{
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    color: #768096;
+}
+
+
+.filter .form .name .clear_btn.show
+{
+    display: flex;
+}
+
+
+.filter .form .name .clear_btn .icon
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+}
+
+
+.filter .form .range .vals
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 70px;
+    padding: 0 23px;
+
+    color: #768096;
+    border: 1px solid #bdc4d5;
+    border-radius: 6px;
+}
+
+
+.filter .form .mini_modal,
+.filter .form .nice-select-dropdown
+{
+    border-radius: 6px;
+}
+
+
+.filter .form .submit
+{
+    padding: 0;
+}
+
+
+.filter .form .reset_btn
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+
+    color: #0155e9;
+}
+
+
+.filter .form .reset_btn .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+
+.filter .form .submit_btn
+{
+    position: relative;
+
+    border-radius: 100px;
+    background: #00b851;
+}
+
+
+.filter .form .submit_btn .icon
+{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+
+    color: #00b851;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.filter .form .submit_btn .icon svg
+{
+    display: block;
+
+    width: 24px;
+    height: 23px;
+    margin-left: 3px;
+}
+
+
+
 /*---------------
     Page head
 ---------------*/
@@ -763,6 +1016,8 @@ aside
 
 .breadcrumbs
 {
+    align-self: center;
+
     color: #768096;
 }
 
@@ -795,6 +1050,17 @@ aside
 
 
 
+.page_head .now
+{
+    line-height: 150%;
+
+    align-self: center;
+
+    margin-left: auto;
+}
+
+
+
 .page_title
 {
     font-size: 60px;
@@ -803,6 +1069,7 @@ aside
 
     display: block;
 
+    width: 100%;
     margin-top: 40px;
 }
 
@@ -976,6 +1243,34 @@ aside
 }
 
 
+.form .input_date,
+.form .input_date + .icon ~ .label
+{
+    padding-right: 73px;
+    padding-left: 23px;
+}
+
+
+.form .input_date + .icon
+{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+    left: auto;
+
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    pointer-events: none;
+
+    color: #768096;
+}
+
+
 .form textarea
 {
     font-family: var(--font_family);
@@ -1082,6 +1377,76 @@ aside
 
     width: 24px;
     height: 24px;
+}
+
+
+.form .mini_modal_btn
+{
+    display: flex;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 60px;
+    padding-right: 73px;
+    padding-left: 23px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    border: 1px solid var(--form_border_color);
+    border-radius: var(--form_border_radius);
+    background: var(--form_bg_color);
+}
+
+
+.form .mini_modal_btn .arr
+{
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+
+    display: block;
+
+    width: 12px;
+    height: 6px;
+    margin: auto 0;
+
+    transition: transform .2s linear;
+    pointer-events: none;
+}
+
+
+.form .mini_modal_btn.active .arr
+{
+    transform: rotate(180deg);
+}
+
+
+.form .mini_modal
+{
+    z-index: 9;
+
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: 4px;
+    padding: 11px 23px;
+
+    border: 1px solid var(--form_border_color);
+    border-radius: 20px;
+    background: var(--form_bg_color);
+}
+
+
+.form .mini_modal .field + .field
+{
+    margin-top: 12px;
 }
 
 
@@ -2019,6 +2384,15 @@ aside
 /*----------
     Lots
 ----------*/
+.lots .block_title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 40px;
+}
+
+
 .lots .grid
 {
     align-content: stretch;
@@ -2034,6 +2408,11 @@ aside
     width: calc(25% - 24px);
     margin-bottom: 24px;
     margin-left: 24px;
+}
+
+.content .lots .grid > *
+{
+    width: calc(33.333% - 24px);
 }
 
 
@@ -2161,6 +2540,24 @@ aside
     margin-right: 8px;
 
     color: #00b851;
+}
+
+.lots .lot .date .icon.red
+{
+    color: #ea5d31;
+}
+
+
+.lots .lot .date small
+{
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-left: 8px;
+
+    text-transform: uppercase;
+
+    color: #ea5d31;
 }
 
 
@@ -2503,13 +2900,6 @@ aside
 /*-------------
     LK info
 -------------*/
-.lk_info
-{
-    margin-bottom: 150px;
-}
-
-
-
 .lk_menu .title
 {
     font-size: 30px;
@@ -2716,6 +3106,14 @@ aside
 
 
 
+.lk_info .pagination a:hover,
+.lk_info .pagination a.active
+{
+    background: #f3f4f7;
+}
+
+
+
 .lk_info .regulations table td:first-child
 {
     width: 160px;
@@ -2901,12 +3299,6 @@ aside
 /*--------------
     Register
 --------------*/
-.register
-{
-    margin-bottom: 150px;
-}
-
-
 .register .data
 {
     width: 1160px;
@@ -2986,6 +3378,1341 @@ aside
     padding: 0 60px;
 
     background: #00b851;
+}
+
+
+
+/*-------------------
+    Category info
+-------------------*/
+.category_info
+{
+    --sidebar_width: 420px;
+}
+
+
+.category_info .content
+{
+    width: calc(100% - var(--sidebar_width) - 24px);
+}
+
+
+.category_info .head
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 29px;
+    padding: 40px 32px;
+
+    background: #fff;
+}
+
+
+.category_info .search
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+}
+
+
+.category_info .search .line
+{
+    width: calc(100% - 181px);
+    margin: 0;
+}
+
+
+.category_info .search .input:focus ~ .label,
+.category_info .search .input.active ~ .label
+{
+    background: none;
+}
+
+
+.category_info .search .submit_btn
+{
+    width: auto;
+    height: 60px;
+    padding: 0 48px;
+
+    text-transform: none;
+
+    border-radius: 50px;
+    background: #0155e9;
+}
+
+
+
+.category_info .head .count
+{
+    margin-top: 44px;
+
+    color: #768096;
+}
+
+
+.category_info .head .count span
+{
+    color: var(--text_color);
+}
+
+
+.category_info .head .sort
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 44px;
+    margin-left: auto;
+}
+
+
+.category_info .head .sort .label
+{
+    position: relative;
+
+    display: block;
+
+    width: auto;
+    height: auto;
+    margin-right: 6px;
+    padding: 0;
+
+    color: #768096;
+}
+
+
+.category_info .head .sort .field
+{
+    position: relative;
+}
+
+
+.category_info .head .sort select
+{
+    display: none;
+}
+
+
+.category_info .head .sort .nice-select
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.category_info .head .sort .nice-select .current
+{
+    display: block;
+    overflow: hidden;
+
+    padding-right: 22px;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: #768096;
+}
+
+
+.category_info .head .sort .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    right: 0;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    min-width: 100%;
+    margin-top: 4px;
+    padding: 6px 0;
+
+    transition: .2s linear;
+    transform: none;
+
+    opacity: 0;
+    border: 1px solid #bdc4d5;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.category_info .head .sort .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+.category_info .head .sort .nice-select .list
+{
+    overflow: auto;
+
+    border-radius: 0;
+}
+
+.category_info .head .sort .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+}
+
+
+.category_info .head .sort .nice-select .list .option
+{
+    display: block;
+
+    padding: 6px 23px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.category_info .head .sort .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+.category_info .head .sort .nice-select + .arr
+{
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 12px;
+    height: 6px;
+    margin: auto 0;
+
+    transition: transform .2s linear;
+    pointer-events: none;
+
+    color: #768096;
+}
+
+
+.category_info .head .sort .nice-select.open + .arr
+{
+    transform: rotate(180deg);
+}
+
+
+
+/*--------------
+    Lot info
+--------------*/
+.lot_info .main_col
+{
+    width: calc(100% - 592px);
+}
+
+
+.lot_info .right_col
+{
+    width: 568px;
+    max-width: 100%;
+}
+
+
+.lot_info .main_col > *
+{
+    position: relative;
+
+    border-radius: 6px;
+    background: #fff;
+}
+
+
+.lot_info .main_col > * + *
+{
+    margin-top: 40px;
+}
+
+
+.lot_info .main_col .head
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 12px 32px;
+
+    cursor: pointer;
+}
+
+
+.lot_info .main_col .head .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    max-width: calc(100% - 82px);
+}
+
+
+.lot_info .main_col .head > .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+
+    color: #0155e9;
+    border-radius: 50%;
+    background: #f3f4f7;
+}
+
+
+.lot_info .main_col .head > .icon svg
+{
+    display: block;
+
+    width: 22px;
+    height: 22px;
+}
+
+
+.lot_info .main_col .head > .icon svg + svg
+{
+    display: none;
+
+    width: 22px;
+    height: 3px;
+}
+
+
+.lot_info .main_col .head.active > .icon svg
+{
+    display: none;
+}
+
+.lot_info .main_col .head.active > .icon svg + svg
+{
+    display: block;
+}
+
+
+.lot_info .main_col .data
+{
+    display: none;
+
+    padding: 40px 32px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+
+/*--------------------------
+    Lot info - Main data
+--------------------------*/
+.lot_info .main_data
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 40px 32px;
+}
+
+
+
+.lot_info .main_data .col
+{
+    width: 512px;
+    max-width: 100%;
+}
+
+
+
+.lot_info .main_data .images .swiper-pagination
+{
+    display: none;
+}
+
+
+
+.lot_info .main_data .images .image
+{
+    position: relative;
+
+    display: block;
+
+    padding-bottom: 73.828%;
+
+    text-decoration: none;
+
+    color: currentColor;
+    background: #ddd;
+}
+
+
+.lot_info .main_data .images .image img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.lot_info .main_data .images .zoom
+{
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.lot_info .main_data .images .zoom .icon
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.lot_info .main_data .images .thumbs
+{
+    margin-top: 20px;
+}
+
+
+.lot_info .main_data .images .thumbs .image
+{
+    cursor: pointer;
+}
+
+
+
+.lot_info .main_data #map
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 220px;
+    margin-top: 40px;
+
+    background: #ddd;
+}
+
+
+[class*='ymaps-2-1'][class*='-copyrights-pane']
+{
+    display: none;
+}
+
+
+
+.lot_info .main_data .data
+{
+    display: block;
+
+    width: calc(50% - 4px);
+    margin-left: auto;
+    padding: 0;
+
+    border: none;
+}
+
+
+.lot_info .main_data .number
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    color: #0155e9;
+}
+
+
+.lot_info .main_data .lot_name
+{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 150%;
+
+    display: block;
+}
+
+
+.lot_info .main_data .features
+{
+    margin-top: 65px;
+}
+
+
+.lot_info .main_data .features .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .main_data .features .item + .item
+{
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #d1d8df;
+}
+
+
+.lot_info .main_data .features .label
+{
+    font-size: 18px;
+
+    width: 200px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .main_data .features .val
+{
+    font-size: 18px;
+
+    width: calc(100% - 200px);
+}
+
+.lot_info .main_data .features .val.full_w
+{
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+
+/*--------------------------------
+    Lot info - Auction details
+--------------------------------*/
+.lot_info .auction_details .col
+{
+    width: 430px;
+    max-width: 100%;
+}
+
+
+.lot_info .auction_details .col + .col
+{
+    width: 452px;
+    margin-left: 120px;
+}
+
+
+.lot_info .auction_details .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .auction_details .item + .item
+{
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .auction_details .label
+{
+    font-size: 18px;
+
+    width: 300px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .auction_details .val
+{
+    font-size: 18px;
+
+    width: calc(100% - 300px);
+}
+
+
+
+/*--------------------------
+    Lot info - Organizer
+--------------------------*/
+.lot_info .organizer .section
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .organizer * + .section
+{
+    margin-top: 30px;
+    padding-top: 70px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .organizer .section .title
+{
+    font-size: 24px;
+
+    width: calc(50% - 20px);
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .organizer .section .items
+{
+    width: 50%;
+}
+
+
+.lot_info .organizer .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .organizer .item + .item
+{
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .organizer .label
+{
+    font-size: 18px;
+
+    width: 50%;
+
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .organizer .section .label
+{
+    width: 220px;
+    max-width: 100%;
+}
+
+
+.lot_info .organizer .val
+{
+    font-size: 18px;
+
+    width: 50%;
+}
+
+.lot_info .organizer .section .val
+{
+    width: calc(100% - 220px);
+}
+
+
+
+/*--------------------------
+    Lot info - Documents
+--------------------------*/
+.lot_info .documents .download_all
+{
+    display: none;
+
+    width: calc(100% - 487px);
+    margin-left: auto;
+}
+
+
+.lot_info .documents .head.active .download_all
+{
+    display: flex;
+}
+
+
+.lot_info .documents .download_all a
+{
+    font-size: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.lot_info .documents .download_all .icon
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+
+    color: #0155e9;
+}
+
+
+.lot_info .documents .head > .icon
+{
+    margin-left: 32px;
+}
+
+
+
+.lot_info .documents .section
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .documents .section + .section
+{
+    margin-top: 80px;
+}
+
+
+.lot_info .documents .section .title
+{
+    font-size: 24px;
+    line-height: 150%;
+
+    width: 405px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .documents .items
+{
+    width: calc(100% - 405px);
+}
+
+
+.lot_info .documents .file
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.lot_info .documents .file.border_b
+{
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dbe2e9;
+}
+
+
+.lot_info .documents .file + .file
+{
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .documents .file .type
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+
+.lot_info .documents .file .type svg
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    color: #2a5699;
+}
+
+
+.lot_info .documents .file .type svg.red
+{
+    color: #cc3131;
+}
+
+
+.lot_info .documents .file .type + *
+{
+    width: calc(100% - 182px);
+}
+
+
+.lot_info .documents .file .name
+{
+    font-size: 18px;
+}
+
+
+.lot_info .documents .file .date
+{
+    margin-top: 10px;
+
+    color: #768096;
+}
+
+
+.lot_info .documents .file .size
+{
+    align-self: center;
+
+    margin-left: auto;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .documents .file .icon
+{
+    display: block;
+    align-self: center;
+
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+
+    color: #0155e9;
+}
+
+
+
+/*-----------------------------
+    Lot info - Table offers
+-----------------------------*/
+.lot_info .table_offers .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    padding: 30px 32px;
+
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    background: #0155e9;
+}
+
+
+.lot_info .table_offers .data
+{
+    display: block;
+
+    padding: 0;
+
+    border: none;
+}
+
+
+.lot_info .table_offers .item
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 30px 32px;
+}
+
+
+.lot_info .table_offers .item + .item
+{
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .table_offers .item .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+.lot_info .table_offers .item .icon svg
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.lot_info .table_offers .item .icon.red
+{
+    background: #ea5d31;
+}
+
+.lot_info .table_offers .item .icon.green svg
+{
+    width: 30px;
+    height: 31px;
+}
+
+
+.lot_info .table_offers .item .icon.green
+{
+    background: #00b851;
+}
+
+.lot_info .table_offers .item .icon.green svg
+{
+    width: 25px;
+    height: 25px;
+}
+
+
+.lot_info .table_offers .item .icon.blue
+{
+    background: #0155e9;
+}
+
+
+.lot_info .table_offers .item .name
+{
+    font-size: 18px;
+
+    width: calc(100% - 518px);
+}
+
+
+.lot_info .table_offers .item .date
+{
+    width: 132px;
+    max-width: 100%;
+
+    white-space: nowrap;
+}
+
+
+.lot_info .table_offers .item .price
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    width: 132px;
+    max-width: 100%;
+    margin-left: 190px;
+
+    white-space: nowrap;
+}
+
+
+
+.lot_info .participate
+{
+    position: sticky;
+    top: 0;
+
+    padding: 40px 32px 60px 32px;
+
+    background: #fff;
+}
+
+
+.lot_info .participate .auction
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding: 5px 5px 5px 32px;
+
+    color: #fff;
+    border-radius: 100px;
+    background: #00b851;
+}
+
+
+.lot_info .participate .auction .label
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .participate .auction .timer
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.lot_info .participate .auction .timer .val
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.lot_info .participate .auction .timer .small
+{
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .participate .auction .timer .sep
+{
+    font-size: 18px;
+
+    margin: 0 9px;
+}
+
+
+.lot_info .participate .auction .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: #00b851;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.lot_info .participate .auction .icon svg
+{
+    display: block;
+
+    width: 25px;
+    height: 25px;
+}
+
+
+.lot_info .participate .price .label
+{
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .participate .price .val
+{
+    font-size: 40px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.lot_info .participate .features
+{
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    border-top: 1px solid #dbe2e9;
+    border-bottom: 1px solid #dbe2e9;
+}
+
+
+.lot_info .participate .features .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .participate .features .item + .item
+{
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #dbe2e9;
+}
+
+
+.lot_info .participate .features .label
+{
+    font-size: 18px;
+
+    width: 270px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+
+    color: #6a7182;
+}
+
+
+.lot_info .participate .features .val
+{
+    font-size: 18px;
+
+    width: calc(100% - 270px);
+}
+
+
+.lot_info .participate .btn
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    display: block;
+
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 50px;
+    background: #ea5d31;
+}
+
+
+.lot_info .participate .exp
+{
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #768096;
+}
+
+
+.lot_info .participate .new_rate
+{
+    display: none;
+
+    margin-top: 80px;
+}
+
+
+.lot_info .participate .new_rate .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.lot_info .participate .new_rate .item
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .participate .new_rate .item + .item
+{
+    margin-top: 20px;
+}
+
+
+.lot_info .participate .new_rate .item .label
+{
+    text-transform: uppercase;
+}
+
+
+.lot_info .participate .new_rate .item .price
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-left: 20px;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+.lot_info .participate .new_rate .form
+{
+    margin-top: 20px;
+
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+}
+
+
+.lot_info .participate .new_rate .form .line
+{
+    margin-bottom: 20px;
+}
+
+
+.lot_info .participate .new_rate .form .input
+{
+    font-weight: 600;
+
+    padding: 0 29px;
+}
+
+
+.lot_info .participate .new_rate .form .submit
+{
+    padding: 0;
+}
+
+
+.lot_info .participate .new_rate .form .submit_btn
+{
+    font-size: 18px;
+
+    text-transform: none;
 }
 
 
