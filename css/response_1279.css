@@ -11,6 +11,12 @@
     }
 
 
+    .wrap
+    {
+        background: var(--bg2);
+    }
+
+
     .content_flex .content
     {
         width: 100%;
@@ -23,78 +29,7 @@
     ------------*/
     header
     {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        right: 100%;
-        left: auto;
-
-        width: 100%;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 74px 0 0;
-
-        transition: transform .3s linear;
-
-        background: #fff;
-    }
-
-    header.show
-    {
-        transform: translateX(100%);
-    }
-
-
-    header .scroll
-    {
-        overflow: auto;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 24px 0;
-
-        overscroll-behavior-y: contain;
-    }
-
-
-    header .logo,
-    header .slogan,
-    header .account
-    {
         display: none;
-    }
-
-
-    header .menu
-    {
-        display: block;
-
-        width: 100%;
-    }
-
-
-    header .menu_item + .menu_item
-    {
-        margin-top: 24px;
-        margin-left: 0;
-    }
-
-
-    header .menu_item > a
-    {
-        font-size: 18px;
-    }
-
-
-
-    header .contacts
-    {
-        margin-top: 48px;
     }
 
 
@@ -139,6 +74,16 @@
 
 
 
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .desc
+    {
+        font-size: 18px;
+    }
+
+
+
     /*------------------
         Form elements
     ------------------*/
@@ -162,6 +107,63 @@
     {
         width: 100%;
         margin-bottom: 24px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .title
+    {
+        font-size: 40px;
+    }
+
+
+    .first_section .search
+    {
+        padding: 40px 40px 80px;
+    }
+
+
+    .first_section .search .form .line
+    {
+        width: calc(100% - 428px);
+    }
+
+
+    .first_section .search .form .line.region
+    {
+        width: 240px;
+    }
+
+
+    .first_section .search .form .submit
+    {
+        width: 140px;
+    }
+
+
+
+    /*-----------
+        About
+    -----------*/
+    .about .row > *
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .about .item:first-child
+    {
+        background: #59606a;
+    }
+
+    .about .item:nth-child(2),
+    .about .item:nth-child(3),
+    .about .item:nth-child(4)
+    {
+        background-color: #fff;
     }
 
 
@@ -247,6 +249,16 @@
     .mob_lk_menu
     {
         display: block;
+    }
+
+
+
+    /*----------
+        Lots
+    ----------*/
+    .lots .grid > *
+    {
+        width: calc(33.333% - 24px);
     }
 
 

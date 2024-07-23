@@ -275,6 +275,24 @@ button
 
 
 
+.overlay
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .5;
+    background: #000;
+}
+
+
+
 /*----------------
     Pagination
 ----------------*/
@@ -695,7 +713,7 @@ header .account .user .arr
 .mob_header
 {
     position: relative;
-    z-index: 20;
+    z-index: 102;
     top: 0;
     left: 0;
 
@@ -863,6 +881,200 @@ header .account .user .arr
 
     width: 26px;
     height: 26px;
+}
+
+
+
+/*---------------
+    Mob. menu
+---------------*/
+.mob_menu
+{
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 100%;
+
+    width: 320px;
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    padding: 74px 0 0;
+
+    transition: transform .3s linear;
+
+    background: #fff;
+}
+
+.mob_menu.show
+{
+    transform: translateX(100%);
+}
+
+
+.mob_menu .scroll
+{
+    overflow: auto;
+
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    padding: 30px 16px 60px;
+
+    overscroll-behavior-y: contain;
+}
+
+
+
+.mob_menu .account
+{
+    margin-bottom: 40px;
+}
+
+
+.mob_menu .account a
+{
+    font-weight: 600;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 5px 5px 5px 50px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 100px;
+    background: #00b851;
+}
+
+
+.mob_menu .account .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: #00b851;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.mob_menu .account .icon svg
+{
+    display: block;
+
+    width: 26px;
+    height: 26px;
+}
+
+
+
+.mob_menu .menu > *
+{
+    padding-bottom: 19px;
+
+    border-bottom: 1px solid #dbe2e9;
+}
+
+
+.mob_menu .menu > * + *
+{
+    margin-top: 20px;
+}
+
+
+.mob_menu .menu a
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #000;
+}
+
+
+
+.mob_menu .contacts
+{
+    margin-top: auto;
+    padding-top: 60px;
+}
+
+
+.mob_menu .contacts .title
+{
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+
+    color: #000;
+}
+
+
+.mob_menu .contacts .phone
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #000;
+}
+
+
+.mob_menu .contacts .phone a
+{
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.mob_menu .contacts .email
+{
+    font-size: 20px;
+
+    margin-top: 16px;
+
+    color: #000;
+}
+
+
+.mob_menu .contacts .email a
+{
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.mob_menu .contacts .location
+{
+    font-size: 18px;
+    line-height: 140%;
+
+    margin-top: 16px;
+
+    color: #000;;
 }
 
 

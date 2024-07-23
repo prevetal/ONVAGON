@@ -4,6 +4,12 @@
     /*-------------------
         Global styles
     -------------------*/
+    .block
+    {
+        margin-bottom: 60px;
+    }
+
+
     .cont
     {
         padding: 0 20px;
@@ -72,6 +78,33 @@
     .form .gallery .delete_btn
     {
         font-size: 14px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title
+    {
+        font-size: 36px;
+    }
+
+
+
+    /*-----------
+        About
+    -----------*/
+    .about .row
+    {
+        margin-left: 0;
+    }
+
+
+    .about .row > *
+    {
+        width: 100%;
+        margin-left: 0;
     }
 
 
@@ -201,6 +234,23 @@
     {
         width: 100%;
         padding: 0 20px;
+    }
+
+
+
+    /*----------
+        Lots
+    ----------*/
+    .lots .grid
+    {
+        margin-left: 0;
+    }
+
+
+    .lots .grid > *
+    {
+        width: 100%;
+        margin-left: 0;
     }
 
 

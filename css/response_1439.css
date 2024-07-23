@@ -4,6 +4,12 @@
     /*-------------------
         Global styles
     -------------------*/
+    .block
+    {
+        margin-bottom: 80px;
+    }
+
+
     .cont
     {
         padding: 0 24px;
@@ -46,6 +52,18 @@
 
 
 
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .desc
+    {
+        font-size: 20px;
+
+        width: 100%;
+    }
+
+
+
     /*------------------
         Form elements
     ------------------*/
@@ -58,6 +76,36 @@
     .form .submit_btn
     {
         font-size: 18px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        padding-top: 60px;
+    }
+
+
+    .first_section .title
+    {
+        font-size: 48px;
+    }
+
+
+    .first_section .search
+    {
+        padding: 40px 48px 80px;
+
+        border-radius: 20px 80px;
+    }
+
+
+    .first_section .search .sub_title
+    {
+        font-size: 24px;
     }
 
 
@@ -133,6 +181,28 @@
     {
         width: calc(100% - 668px);
         margin-right: -24px;
+    }
+
+
+
+    /*----------
+        Lots
+    ----------*/
+    .lots .lot .thumb
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .lots .lot .row
+    {
+        margin-top: 20px;
+    }
+
+
+    .lots .lot .row .val
+    {
+        font-size: 16px;
     }
 
 

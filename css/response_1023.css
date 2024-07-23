@@ -80,6 +80,66 @@
 
 
 
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title
+    {
+        font-size: 40px;
+    }
+
+
+    .block_head .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        padding-top: 48px;
+    }
+
+
+    .first_section .title
+    {
+        line-height: 120%;
+
+        text-transform: none;
+    }
+
+
+    .first_section .title br
+    {
+        display: none;
+    }
+
+
+    .first_section .search
+    {
+        padding: 60px 24px 100px;
+    }
+
+
+    .first_section .search .form .line,
+    .first_section .search .form .line.region
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .first_section .search .form .submit
+    {
+        width: 100%;
+    }
+
+
+
     /*-----------
         Login
     -----------*/
@@ -309,6 +369,16 @@
     .register .form .submit_btn
     {
         font-size: 16px;
+    }
+
+
+
+    /*----------
+        Lots
+    ----------*/
+    .lots .grid > *
+    {
+        width: calc(50% - 24px);
     }
 
 

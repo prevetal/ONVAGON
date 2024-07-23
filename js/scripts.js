@@ -5,12 +5,16 @@ BODY = document.getElementsByTagName('body')[0]
 
 document.addEventListener('DOMContentLoaded', function () {
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click(e => {
+	$('.mob_header .mob_menu_btn, .overlay').click(e => {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').toggleClass('active')
 		$('body').toggleClass('menu_open')
-		$('header').toggleClass('show')
+		$('.mob_menu').toggleClass('show')
+
+		$('.mob_header .mob_menu_btn').hasClass('active')
+			? $('.overlay').fadeIn(300)
+			: $('.overlay').fadeOut(200)
 	})
 
 
