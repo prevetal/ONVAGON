@@ -4,6 +4,62 @@ BODY = document.getElementsByTagName('body')[0]
 
 
 document.addEventListener('DOMContentLoaded', function () {
+	// Lots slider
+	const lotsSliders = [],
+		lots = document.querySelectorAll('.lots .swiper')
+
+	lots.forEach((el, i) => {
+		el.classList.add('lots_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 16,
+					slidesPerView: 'auto'
+				},
+				480: {
+					spaceBetween: 20,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1024: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1280: {
+					spaceBetween: 24,
+					slidesPerView: 4
+				}
+			},
+			on: {
+				init: swiper => setHeight(swiper.el.querySelectorAll('.lot')),
+				resize: swiper => {
+					let items = swiper.el.querySelectorAll('.lot')
+
+					items.forEach(el => el.style.height = 'auto')
+
+					setHeight(items)
+				}
+			}
+		}
+
+		lotsSliders.push(new Swiper('.lots_s' + i, options))
+	})
+
+
 	// Mob. menu
 	$('.mob_header .mob_menu_btn, .overlay').click(e => {
 		e.preventDefault()
@@ -244,13 +300,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.lot_info .participate .btn').click(function(e) {
+	$('.lot_info .btn').click(function(e) {
 		e.preventDefault()
 
 		$(this).hide()
-		$('.lot_info .participate .exp').hide()
+		$('.lot_info .exp').hide()
 
-		$('.lot_info .participate .new_rate').fadeIn(200)
+		$('.lot_info .new_rate').fadeIn(200)
 	})
 })
 

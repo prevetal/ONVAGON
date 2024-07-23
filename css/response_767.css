@@ -334,6 +334,153 @@
 
 
 
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_data .col
+    {
+        width: 100%;
+    }
+
+
+    .lot_info .main_data .data
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .lot_info .main_data .features
+    {
+        margin-top: 40px;
+    }
+
+
+    .lot_info .main_col .head .title
+    {
+        font-size: 20px;
+    }
+
+
+    .lot_info .btn
+    {
+        margin-top: 24px;
+    }
+
+
+    .lot_info .new_rate .item .label
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*--------------------------------
+        Lot info - Auction details
+    --------------------------------*/
+    .lot_info .auction_details .label
+    {
+        font-size: 12px;
+
+        width: 120px;
+        padding-top: 3px;
+    }
+
+
+    .lot_info .auction_details .val
+    {
+        width: calc(100% - 140px);
+
+        text-align: right;
+    }
+
+
+
+    /*--------------------------
+        Lot info - Organizer
+    --------------------------*/
+    .lot_info .organizer .section .title
+    {
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .lot_info .organizer .label,
+    .lot_info .organizer .section .label
+    {
+        font-size: 12px;
+
+        width: 120px;
+        padding-top: 3px;
+    }
+
+
+    .lot_info .organizer .val,
+    .lot_info .organizer .section .val
+    {
+        width: calc(100% - 140px);
+
+        text-align: right;
+    }
+
+
+
+    /*--------------------------
+        Lot info - Documents
+    --------------------------*/
+    .lot_info .documents .section .title
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .lot_info .documents .file .name
+    {
+        width: calc(100% + 122px);
+    }
+
+
+    .lot_info .documents .file .size,
+    .lot_info .documents .file .icon
+    {
+        align-self: flex-end;
+    }
+
+
+    .lot_info .documents .file .icon
+    {
+        margin-bottom: -4px;
+    }
+
+
+
+    /*-----------------------------
+        Lot info - Table offers
+    -----------------------------*/
+    .lot_info .table_offers .item .name,
+    .lot_info .table_offers .item .date,
+    .lot_info .table_offers .item .price
+    {
+        width: calc(100% - 64px);
+    }
+
+
+    .lot_info .table_offers .item .date,
+    .lot_info .table_offers .item .price
+    {
+        margin-left: auto;
+    }
+
+
+    .lot_info .table_offers .item .price
+    {
+        margin-top: 16px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

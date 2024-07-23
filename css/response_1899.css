@@ -341,6 +341,194 @@
 
 
 
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_col
+    {
+        width: calc(100% - 440px);
+    }
+
+
+    .lot_info .main_col > *
+    {
+        width: calc(100% + 440px);
+        margin-right: -440px;
+    }
+
+
+    .lot_info .right_col
+    {
+        width: 416px;
+    }
+
+
+
+    .lot_info .auction
+    {
+        padding-left: 15px;
+    }
+
+
+    .lot_info .auction .label
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .lot_info .auction .timer .sep
+    {
+        font-size: var(--font_size);
+
+        margin: 0 5px;
+    }
+
+
+    .lot_info .price .label
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .lot_info .price .val
+    {
+        font-size: 30px;
+    }
+
+
+
+    .lot_info .main_data
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    .lot_info .main_data .col
+    {
+        width: calc(50% - 14px);
+    }
+
+
+    .lot_info .main_data .data
+    {
+        width: calc(50% - 10px);
+    }
+
+
+
+    .lot_info .main_data .images .zoom
+    {
+        right: 15px;
+        bottom: 15px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .lot_info .main_data .images .zoom .icon
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .lot_info .main_data #map
+    {
+        height: 164px;
+    }
+
+
+
+    .lot_info .main_data .number
+    {
+        font-size: var(--font_size);
+
+        margin-bottom: 11px;
+    }
+
+
+    .lot_info .main_data .lot_name
+    {
+        font-size: 18px;
+    }
+
+
+    .lot_info .main_data .features
+    {
+        margin-top: 60px;
+    }
+
+
+    .lot_info .main_data .features .item + .item
+    {
+        margin-top: 16px;
+        padding-top: 16px;
+    }
+
+
+    .lot_info .main_data .features .label
+    {
+        font-size: 14px;
+
+        width: 140px;
+    }
+
+
+    .lot_info .main_data .features .val
+    {
+        font-size: var(--font_size);
+
+        width: calc(100% - 140px);
+    }
+
+
+    .lot_info .main_data .features .val.full_w
+    {
+        margin-top: 4px;
+    }
+
+
+
+    /*----------------------------
+        Lot info - Participate
+    ----------------------------*/
+    .lot_info .participate
+    {
+        position: relative;
+    }
+
+
+    .lot_info .participate .features .label
+    {
+        font-size: 14px;
+
+        width: 180px;
+    }
+
+
+    .lot_info .participate .features .val
+    {
+        font-size: var(--font_size);
+
+        width: calc(100% - 214px);
+    }
+
+
+
+    /*--------------------------------
+        Lot info - Auction details
+    --------------------------------*/
+    .lot_info .auction_details .col + .col
+    {
+        width: calc(100% - 510px);
+        margin-left: auto;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

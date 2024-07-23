@@ -146,6 +146,53 @@
 
 
 
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_data
+    {
+        padding: 24px 16px;
+    }
+
+
+
+    .lot_info .main_col .head,
+    .lot_info .main_col .head + .data
+    {
+        padding: 24px 16px;
+    }
+
+
+
+    /*----------
+        Lots
+    ----------*/
+    .lots .block_title
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .lots .swiper-slide
+    {
+        visibility: visible;
+
+        width: 320px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .lots .swiper-button-next,
+    .lots .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

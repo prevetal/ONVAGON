@@ -111,6 +111,49 @@
 
 
 
+    /*------------
+        Filter
+    ------------*/
+    .filter
+    {
+        overflow: auto;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 30px 16px 60px;
+
+        background: #fff;
+
+        overscroll-behavior-y: contain;
+    }
+
+    .filter:before
+    {
+        display: none;
+    }
+
+
+    .filter .close_btn
+    {
+        display: flex;
+    }
+
+
+    .filter .title
+    {
+        display: none;
+    }
+
+
+    .filter .form .line
+    {
+        margin-bottom: 40px;
+    }
+
+
+
     /*-------------------
         First section
     -------------------*/
@@ -256,6 +299,19 @@
     /*----------
         Lots
     ----------*/
+    .lots .block_title
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .lots .swiper-button-next,
+    .lots .swiper-button-prev
+    {
+        margin-bottom: 25px;
+    }
+
+
     .lots .grid > *
     {
         width: calc(33.333% - 24px);
@@ -297,45 +353,258 @@
 
 
 
-    /*------------
-        Filter
-    ------------*/
-    .filter
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_col
     {
-        overflow: auto;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 30px 16px 60px;
-
-        background: #fff;
-
-        overscroll-behavior-y: contain;
-    }
-
-    .filter:before
-    {
-        display: none;
+        width: 100%;
     }
 
 
-    .filter .close_btn
+    .lot_info .main_col > *
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+
+    .lot_info .main_data .auction
     {
         display: flex;
+
+        margin-bottom: 30px;
+        padding-left: 30px;
     }
 
 
-    .filter .title
+    .lot_info .main_data .price
+    {
+        display: block;
+
+        margin-bottom: 22px;
+    }
+
+
+    .lot_info .main_data .features + .features,
+    .lot_info .main_data .btn,
+    .lot_info .main_data .exp
+    {
+        display: block;
+    }
+
+
+    .lot_info .btn
+    {
+        font-size: 18px;
+
+        margin-top: 40px;
+    }
+
+
+    .lot_info .new_rate
+    {
+        margin-top: 40px;
+    }
+
+
+    .lot_info .new_rate .title
+    {
+        font-size: 24px;
+    }
+
+
+    .lot_info .new_rate .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+
+    /*--------------------------------
+        Lot info - Auction details
+    --------------------------------*/
+    .lot_info .auction_details .col
+    {
+        width: 360px;
+    }
+
+    .lot_info .auction_details .col + .col
+    {
+        width: calc(100% - 400px);
+    }
+
+
+    .lot_info .auction_details .item + .item
+    {
+        margin-top: 16px;
+        padding-top: 16px;
+    }
+
+
+    .lot_info .auction_details .label
+    {
+        font-size: 14px;
+
+        width: 220px;
+    }
+
+
+    .lot_info .auction_details .val
+    {
+        font-size: var(--font_size);
+
+        width: calc(100% - 220px);
+    }
+
+
+
+    /*--------------------------
+        Lot info - Organizer
+    --------------------------*/
+    .lot_info .organizer .item + .item
+    {
+        margin-top: 16px;
+        padding-top: 16px;
+    }
+
+
+    .lot_info .organizer .label
+    {
+        font-size: 14px;
+
+        width: 300px;
+    }
+
+
+    .lot_info .organizer .val
+    {
+        font-size: var(--font_size);
+
+        width: calc(100% - 300px);
+    }
+
+
+    .lot_info .organizer * + .section
+    {
+        margin-top: 16px;
+        padding-top: 60px;
+    }
+
+
+    .lot_info .organizer .section .title
+    {
+        font-size: 20px;
+
+        width: 300px;
+    }
+
+
+    .lot_info .organizer .section .items
+    {
+        width: calc(100% - 300px);
+    }
+
+
+
+    /*--------------------------
+        Lot info - Documents
+    --------------------------*/
+    .lot_info .documents .download_all
+    {
+        width: calc(100% - 387px);
+    }
+
+
+    .lot_info .documents .download_all a
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    .lot_info .documents .section + .section
+    {
+        margin-top: 60px;
+    }
+
+
+    .lot_info .documents .section .title
+    {
+        font-size: 20px;
+
+        width: 300px;
+    }
+
+
+    .lot_info .documents .items
+    {
+        width: calc(100% - 300px);
+    }
+
+
+    .lot_info .documents .file + .file
+    {
+        margin-top: 16px;
+        padding-top: 16px;
+    }
+
+    .lot_info .documents .file.border_b
+    {
+        padding-bottom: 16px;
+    }
+
+
+    .lot_info .documents .file .type + *
+    {
+        width: calc(100% - 164px);
+    }
+
+
+    .lot_info .documents .file .name
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .lot_info .documents .file .date
+    {
+        font-size: 14px;
+
+        margin-top: 5px;
+    }
+
+
+    .lot_info .documents .file .size
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*-----------------------------
+        Lot info - Table offers
+    -----------------------------*/
+    .lot_info .table_offers .data
+    {
+        padding: 0;
+    }
+
+
+    .lot_info .table_offers .item .name
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*----------------------------
+        Lot info - Participate
+    ----------------------------*/
+    .lot_info .participate
     {
         display: none;
-    }
-
-
-    .filter .form .line
-    {
-        margin-bottom: 40px;
     }
 
 

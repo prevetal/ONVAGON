@@ -240,6 +240,64 @@
 
 
 
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_data
+    {
+        padding: 40px 24px;
+    }
+
+
+
+    .lot_info .main_col .head
+    {
+        padding: 16px 24px;
+    }
+
+
+    .lot_info .main_col .head .title
+    {
+        font-size: 24px;
+    }
+
+
+
+    .lot_info .main_col .head + .data
+    {
+        padding: 40px 24px;
+    }
+
+
+
+    /*-----------------------------
+        Lot info - Table offers
+    -----------------------------*/
+    .lot_info .table_offers .title
+    {
+        font-size: 24px;
+
+        padding: 24px;
+    }
+
+
+    .lot_info .table_offers .item
+    {
+        padding: 20px 24px;
+    }
+
+
+
+    /*----------------------------
+        Lot info - Participate
+    ----------------------------*/
+    .lot_info .participate
+    {
+        padding: 40px 24px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

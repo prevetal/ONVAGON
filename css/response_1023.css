@@ -384,6 +384,165 @@
 
 
 
+    /*--------------
+        Lot info
+    --------------*/
+    .lot_info .main_data
+    {
+        padding: 24px;
+    }
+
+
+
+    .lot_info .main_col .head + .data
+    {
+        padding: 24px;
+    }
+
+
+    .lot_info .main_data .auction
+    {
+        padding-left: 20px;
+    }
+
+
+    .lot_info .price .label
+    {
+        margin-bottom: 0;
+    }
+
+
+
+    /*--------------------------------
+        Lot info - Auction details
+    --------------------------------*/
+    .lot_info .auction_details .col,
+    .lot_info .auction_details .col + .col
+    {
+        width: 100%;
+    }
+
+
+    .lot_info .auction_details .col + .col
+    {
+        margin-top: 16px;
+        padding-top: 16px;
+
+        border-top: 1px solid #dbe2e9;
+    }
+
+
+    .lot_info .auction_details .label
+    {
+        width: 260px;
+    }
+
+
+    .lot_info .auction_details .val
+    {
+        width: calc(100% - 260px);
+    }
+
+
+
+    /*--------------------------
+        Lot info - Organizer
+    --------------------------*/
+    .lot_info .organizer .label,
+    .lot_info .organizer .section .label
+    {
+        width: 260px;
+    }
+
+
+    .lot_info .organizer .val,
+    .lot_info .organizer .section .val
+    {
+        width: calc(100% - 260px);
+    }
+
+
+    .lot_info .organizer * + .section
+    {
+        padding-top: 40px;
+    }
+
+
+    .lot_info .organizer .section .title
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .lot_info .organizer .section .items
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------------
+        Lot info - Documents
+    --------------------------*/
+    .lot_info .documents .download_all
+    {
+        order: 2;
+
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+
+    .lot_info .documents .section + .section
+    {
+        margin-top: 40px;
+    }
+
+
+    .lot_info .documents .section .title
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .lot_info .documents .section .title br
+    {
+        display: none;
+    }
+
+
+    .lot_info .documents .items
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------------------------
+        Lot info - Table offers
+    -----------------------------*/
+    .lot_info .table_offers .item
+    {
+        padding: 16px 24px;
+    }
+
+
+    .lot_info .table_offers .item .name
+    {
+        width: calc(100% - 388px);
+    }
+
+
+    .lot_info .table_offers .item .price
+    {
+        margin-left: 60px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

@@ -2760,6 +2760,69 @@ aside
 }
 
 
+.lots .swiper
+{
+    overflow: visible !important;
+}
+
+
+.lots .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.lots .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.lots .swiper-button-next,
+.lots .swiper-button-prev
+{
+    top: auto;
+    bottom: 100%;
+
+    width: 45px;
+    height: 45px;
+    margin: 0 0 35px;
+
+    color: #0155e9;
+}
+
+
+.lots .swiper-button-prev
+{
+    right: 61px;
+    left: auto;
+}
+
+.lots .swiper-button-next
+{
+    right: 0;
+}
+
+
+.lots .swiper-button-next .icon,
+.lots .swiper-button-prev .icon
+{
+    width: 25px;
+    height: 15px;
+}
+
+
 .lots .grid
 {
     align-content: stretch;
@@ -4254,7 +4317,7 @@ aside
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding: 12px 32px;
+    padding: 24px 32px;
 
     cursor: pointer;
 }
@@ -4316,13 +4379,242 @@ aside
 }
 
 
-.lot_info .main_col .data
+.lot_info .main_col .head + .data
 {
     display: none;
 
     padding: 40px 32px;
 
     border-top: 1px solid #dbe2e9;
+}
+
+
+
+.lot_info .auction
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding: 5px 5px 5px 32px;
+
+    color: #fff;
+    border-radius: 100px;
+    background: #00b851;
+}
+
+
+.lot_info .auction .label
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .auction .timer
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.lot_info .auction .timer .val
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.lot_info .auction .timer .small
+{
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.lot_info .auction .timer .sep
+{
+    font-size: 18px;
+
+    margin: 0 9px;
+}
+
+
+.lot_info .auction .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: #00b851;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.lot_info .auction .icon svg
+{
+    display: block;
+
+    width: 25px;
+    height: 25px;
+}
+
+
+.lot_info .price .label
+{
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+
+    color: #768096;
+}
+
+
+.lot_info .price .val
+{
+    font-size: 40px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+
+.lot_info .btn
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    display: block;
+
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 50px;
+    background: #ea5d31;
+}
+
+
+.lot_info .exp
+{
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #768096;
+}
+
+
+.lot_info .new_rate
+{
+    display: none;
+
+    margin-top: 80px;
+}
+
+
+.lot_info .new_rate .title
+{
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.lot_info .new_rate .item
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+.lot_info .new_rate .item + .item
+{
+    margin-top: 20px;
+}
+
+
+.lot_info .new_rate .item .label
+{
+    text-transform: uppercase;
+}
+
+
+.lot_info .new_rate .item .price
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 0;
+    margin-left: 20px;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+.lot_info .new_rate .form
+{
+    margin-top: 20px;
+
+    --form_border_color: #bdc4d5;
+    --form_focus_color: #bdc4d5;
+}
+
+
+.lot_info .new_rate .form .line
+{
+    margin-bottom: 20px;
+}
+
+
+.lot_info .new_rate .form .input
+{
+    font-weight: 600;
+
+    padding: 0 29px;
+}
+
+
+.lot_info .new_rate .form .submit
+{
+    padding: 0;
+}
+
+
+.lot_info .new_rate .form .submit_btn
+{
+    font-size: 18px;
+
+    text-transform: none;
 }
 
 
@@ -4339,6 +4631,8 @@ aside
     justify-content: space-between;
 
     padding: 40px 32px;
+
+    border-radius: 0;
 }
 
 
@@ -4461,6 +4755,16 @@ aside
     padding: 0;
 
     border: none;
+}
+
+
+.lot_info .main_data .auction,
+.lot_info .main_data .price,
+.lot_info .main_data .features + .features,
+.lot_info .main_data .btn,
+.lot_info .main_data .exp
+{
+    display: none;
 }
 
 
@@ -5015,123 +5319,17 @@ aside
 
 
 
+/*----------------------------
+    Lot info - Participate
+----------------------------*/
 .lot_info .participate
 {
     position: sticky;
     top: 0;
 
-    padding: 40px 32px 60px 32px;
+    padding: 40px 32px 60px;
 
     background: #fff;
-}
-
-
-.lot_info .participate .auction
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-bottom: 40px;
-    padding: 5px 5px 5px 32px;
-
-    color: #fff;
-    border-radius: 100px;
-    background: #00b851;
-}
-
-
-.lot_info .participate .auction .label
-{
-    font-size: 20px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-}
-
-
-.lot_info .participate .auction .timer
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    text-align: center;
-}
-
-
-.lot_info .participate .auction .timer .val
-{
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-.lot_info .participate .auction .timer .small
-{
-    font-size: 9px;
-    font-weight: 600;
-
-    text-transform: uppercase;
-}
-
-
-.lot_info .participate .auction .timer .sep
-{
-    font-size: 18px;
-
-    margin: 0 9px;
-}
-
-
-.lot_info .participate .auction .icon
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    width: 50px;
-    height: 50px;
-
-    color: #00b851;
-    border-radius: 50%;
-    background: #fff;
-}
-
-
-.lot_info .participate .auction .icon svg
-{
-    display: block;
-
-    width: 25px;
-    height: 25px;
-}
-
-
-.lot_info .participate .price .label
-{
-    font-size: 18px;
-
-    margin-bottom: 5px;
-
-    text-transform: uppercase;
-
-    color: #768096;
-}
-
-
-.lot_info .participate .price .val
-{
-    font-size: 40px;
-    font-weight: 600;
-
-    white-space: nowrap;
 }
 
 
@@ -5183,123 +5381,6 @@ aside
     font-size: 18px;
 
     width: calc(100% - 270px);
-}
-
-
-.lot_info .participate .btn
-{
-    font-size: 20px;
-    font-weight: 700;
-
-    display: block;
-
-    width: 100%;
-    height: 60px;
-    margin-top: 60px;
-
-    text-transform: uppercase;
-
-    color: #fff;
-    border-radius: 50px;
-    background: #ea5d31;
-}
-
-
-.lot_info .participate .exp
-{
-    margin-top: 15px;
-
-    text-align: center;
-
-    color: #768096;
-}
-
-
-.lot_info .participate .new_rate
-{
-    display: none;
-
-    margin-top: 80px;
-}
-
-
-.lot_info .participate .new_rate .title
-{
-    font-size: 30px;
-    font-weight: 600;
-
-    margin-bottom: 20px;
-}
-
-
-.lot_info .participate .new_rate .item
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-
-.lot_info .participate .new_rate .item + .item
-{
-    margin-top: 20px;
-}
-
-
-.lot_info .participate .new_rate .item .label
-{
-    text-transform: uppercase;
-}
-
-
-.lot_info .participate .new_rate .item .price
-{
-    font-size: 20px;
-    font-weight: 600;
-
-    margin-left: 20px;
-
-    white-space: nowrap;
-    text-transform: uppercase;
-}
-
-
-.lot_info .participate .new_rate .form
-{
-    margin-top: 20px;
-
-    --form_border_color: #bdc4d5;
-    --form_focus_color: #bdc4d5;
-}
-
-
-.lot_info .participate .new_rate .form .line
-{
-    margin-bottom: 20px;
-}
-
-
-.lot_info .participate .new_rate .form .input
-{
-    font-weight: 600;
-
-    padding: 0 29px;
-}
-
-
-.lot_info .participate .new_rate .form .submit
-{
-    padding: 0;
-}
-
-
-.lot_info .participate .new_rate .form .submit_btn
-{
-    font-size: 18px;
-
-    text-transform: none;
 }
 
 
