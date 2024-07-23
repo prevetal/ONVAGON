@@ -376,7 +376,8 @@
     /*----------
         Lots
     ----------*/
-    .lots .grid > *
+    .lots .grid > *,
+    .content .lots .grid > *
     {
         width: calc(50% - 24px);
     }

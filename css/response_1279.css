@@ -263,6 +263,83 @@
 
 
 
+    /*-------------------
+        Category info
+    -------------------*/
+    .category_info aside
+    {
+        position: fixed;
+        z-index: 101;
+        right: 100%;
+        bottom: 0;
+
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        margin: 0;
+        padding: 74px 0 0;
+
+        transition: transform .3s linear;
+    }
+
+    .category_info aside.show
+    {
+        transform: translateX(100%);
+    }
+
+
+    .category_info .mob_filter_btn
+    {
+        display: flex;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    .filter
+    {
+        overflow: auto;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 30px 16px 60px;
+
+        background: #fff;
+
+        overscroll-behavior-y: contain;
+    }
+
+    .filter:before
+    {
+        display: none;
+    }
+
+
+    .filter .close_btn
+    {
+        display: flex;
+    }
+
+
+    .filter .title
+    {
+        display: none;
+    }
+
+
+    .filter .form .line
+    {
+        margin-bottom: 40px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

@@ -324,6 +324,22 @@
     }
 
 
+    .lots .lot .date small
+    {
+        display: none;
+    }
+
+
+
+    /*-------------------
+        Category info
+    -------------------*/
+    .category_info
+    {
+        --sidebar_width: 306px;
+    }
+
+
 
     /*------------
         Footer

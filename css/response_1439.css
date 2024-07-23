@@ -80,6 +80,28 @@
 
 
 
+    /*------------
+        Filter
+    ------------*/
+    .filter
+    {
+        padding: 40px 24px 60px 0;
+    }
+
+
+    .filter .title
+    {
+        font-size: 24px;
+    }
+
+
+    .filter .form .reset_btn
+    {
+        font-size: 18px;
+    }
+
+
+
     /*-------------------
         First section
     -------------------*/
@@ -203,6 +225,17 @@
     .lots .lot .row .val
     {
         font-size: 16px;
+    }
+
+
+
+    /*-------------------
+        Category info
+    -------------------*/
+    .category_info .head
+    {
+        margin-bottom: 24px;
+        padding: 40px 24px;
     }
 
 

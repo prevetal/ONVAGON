@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').toggleClass('active')
-		$('body').toggleClass('menu_open')
+		$('body').toggleClass('lock')
 		$('.mob_menu').toggleClass('show')
 
 		$('.mob_header .mob_menu_btn').hasClass('active')
@@ -127,6 +127,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Filter
+	$('.category_info .mob_filter_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').toggleClass('lock filter_open')
+		$('.category_info aside').addClass('show')
+		$('.overlay').fadeIn(300)
+	})
+
+
+	$('.filter .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').toggleClass('lock filter_open')
+		$('.category_info aside').removeClass('show')
+		$('.overlay').fadeOut(200)
+	})
+
+
 	$priceRange = $('.filter #price_range').ionRangeSlider({
 		type: 'double',
 		min: 0,

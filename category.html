@@ -196,6 +196,14 @@
 					<div class="cont row">
 						<aside>
 							<div class="filter">
+								<button class="close_btn">
+									<span>Закрыть фильтры</span>
+
+									<div class="icon">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_delete2"></use></svg>
+									</div>
+								</button>
+
 								<div class="title">Параметры поиска</div>
 
 								<form action="" class="form">
@@ -367,14 +375,28 @@
 
 											<input type="text" name="" value="" class="input">
 
-											<div class="label">Введите ключевое слово для поиска</div>
+											<div class="label">
+												<span>Введите ключевое слово для поиска</span>
+												<span>Поиск</span>
+											</div>
 										</div>
 									</div>
 
 									<div class="submit">
-										<button type="submit" class="submit_btn">Найти</button>
+										<button type="submit" class="submit_btn">
+											<span>Найти</span>
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+										</button>
 									</div>
 								</form>
+
+								<button class="mob_filter_btn">
+									<span>параметры поиска</span>
+
+									<div class="icon">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter"></use></svg>
+									</div>
+								</button>
 
 								<div class="count">Найдено <span>37</span></div>
 
@@ -939,9 +961,9 @@
 
 									<a href="/">2</a>
 
-									<a href="/">3</a>
+									<a href="/" class="hide">3</a>
 
-									<a href="/">4</a>
+									<a href="/" class="hide">4</a>
 
 									<div class="sep">...</div>
 
@@ -1025,6 +1047,9 @@
 
 				<img src="images/bg_footer.svg" alt="" loading="lazy" class="bg">
 			</footer>
+
+
+			<div class="overlay"></div>
 		</div>
 
 

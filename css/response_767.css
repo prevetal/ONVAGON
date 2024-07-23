@@ -92,6 +92,16 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head .now
+    {
+        display: none;
+    }
+
+
+
     /*-----------
         About
     -----------*/
@@ -247,10 +257,79 @@
     }
 
 
-    .lots .grid > *
+    .lots .grid > *,
+    .content .lots .grid > *
     {
         width: 100%;
         margin-left: 0;
+    }
+
+
+
+    /*-------------------
+        Category info
+    -------------------*/
+    .category_info .head
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+        padding: 24px 20px;
+    }
+
+
+    .category_info .search .line
+    {
+        width: 100%;
+    }
+
+
+    .category_info .search .submit
+    {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        right: 4px;
+        bottom: 0;
+
+        width: 50px;
+        height: 50px;
+        margin: auto 0;
+    }
+
+
+    .category_info .search .submit_btn
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 50px;
+        height: 50px;
+        padding: 0;
+
+        border-radius: 50%;
+    }
+
+
+    .category_info .search .submit_btn span
+    {
+        display: none;
+    }
+
+
+    .category_info .search .submit_btn .icon
+    {
+        display: block;
+    }
+
+
+    .category_info .head .sort .label
+    {
+        display: none;
     }
 
 

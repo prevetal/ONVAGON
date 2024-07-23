@@ -19,6 +19,14 @@
     }
 
 
+    .pagination a,
+    .pagination .sep
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+
     .pagination .hide
     {
         display: none;

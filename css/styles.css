@@ -160,7 +160,7 @@ body
     color: var(--text_color);
 }
 
-body.menu_open
+body.lock
 {
     overflow: hidden;
 }
@@ -725,6 +725,11 @@ header .account .user .arr
     background: #fff;
 }
 
+.filter_open .mob_header
+{
+    z-index: 100;
+}
+
 
 .mob_header .cont
 {
@@ -1099,7 +1104,7 @@ aside
 {
     position: relative;
 
-    padding: 40px 32px 60px;
+    padding: 40px 32px 60px 0;
 }
 
 
@@ -1119,6 +1124,52 @@ aside
     pointer-events: none;
 
     background: #fff;
+}
+
+
+.filter .close_btn
+{
+    font-weight: 600;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 5px 5px 5px 70px;
+
+    text-transform: uppercase;
+
+    border-radius: 100px;
+    background: #f3f4f7;
+}
+
+
+.filter .close_btn .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.filter .close_btn .icon svg
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -1256,6 +1307,8 @@ aside
 .filter .form .submit_btn
 {
     position: relative;
+
+    padding-right: 21px;
 
     border-radius: 100px;
     background: #00b851;
@@ -1686,7 +1739,6 @@ aside
 .form .mini_modal_btn
 {
     display: flex;
-    overflow: hidden;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -1694,15 +1746,22 @@ aside
 
     width: 100%;
     height: 60px;
-    padding-right: 73px;
+    padding-right: 57px;
     padding-left: 23px;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
     border: 1px solid var(--form_border_color);
     border-radius: var(--form_border_radius);
     background: var(--form_bg_color);
+}
+
+
+.form .mini_modal_btn span
+{
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -3877,6 +3936,8 @@ aside
 
 .category_info .search
 {
+    position: relative;
+
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -3904,9 +3965,14 @@ aside
 }
 
 
+.category_info .search .submit
+{
+    width: 157px;
+}
+
+
 .category_info .search .submit_btn
 {
-    width: auto;
     height: 60px;
     padding: 0 48px;
 
@@ -3914,6 +3980,64 @@ aside
 
     border-radius: 50px;
     background: #0155e9;
+}
+
+
+.category_info .search .submit_btn .icon
+{
+    display: none;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.category_info .mob_filter_btn
+{
+    font-weight: 600;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 5px 5px 70px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 100px;
+    background: #00b851;
+}
+
+
+.category_info .mob_filter_btn .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: #00b851;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.category_info .mob_filter_btn .icon svg
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
 }
 
 
