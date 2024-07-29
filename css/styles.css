@@ -1268,6 +1268,12 @@ aside
 }
 
 
+.filter .form .mini_modal .checkbox > *
+{
+    pointer-events: none;
+}
+
+
 .filter .form .submit
 {
     padding: 0;
@@ -3547,14 +3553,18 @@ aside
 .lk_info .filter
 {
     display: flex;
+    overflow: visible;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    height: auto;
     margin-bottom: 10px;
     margin-left: -10px;
     padding: 0;
+
+    background: none;
 
     --form_border_color: #768096;
     --form_focus_color: #768096;

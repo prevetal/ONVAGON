@@ -207,7 +207,7 @@
 
     .lk_info table tr + tr
     {
-        margin-top: 30px;
+        margin-top: -1px;
     }
 
 

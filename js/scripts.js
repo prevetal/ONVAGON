@@ -219,6 +219,45 @@ document.addEventListener('DOMContentLoaded', function () {
 	}).data('ionRangeSlider')
 
 
+	$('.filter .form .mini_modal .checkbox').click(function(e) {
+		if (e.target.nodeName == 'LABEL') {
+			let _self = $(this)
+
+			setTimeout(() => {
+				let parent =_self.closest('.line'),
+					checkboxes = parent.find('.mini_modal input:checked'),
+					text = []
+
+				// Generate text
+				if (checkboxes.length) {
+					checkboxes.each(() => text.push($(this).find('.check + *').text()))
+				}
+
+				// Set count
+				checkboxes.length
+					? parent.find('.name').addClass('blue').find('.count').text(checkboxes.length)
+					: parent.find('.name').removeClass('blue').find('.count').text('0')
+
+				// Set text
+				text.length
+					? parent.find('.mini_modal_btn span').text(text.join(', '))
+					: parent.find('.mini_modal_btn span').text((''))
+			})
+		}
+	})
+
+
+
+	// Datepicker
+	const dateInputs = document.querySelectorAll('.input_date')
+
+	dateInputs.forEach(el => {
+		new AirDatepicker(el, {
+			autoClose: true
+		})
+	})
+
+
 	$('.filter .form .reset_btn').click(function() {
 		if ($priceRange) {
 			$priceRange.reset()
